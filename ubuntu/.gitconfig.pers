@@ -1,0 +1,9 @@
+[user]
+email = <email_perso>
+name = <name_perso>
+ 
+[github]
+user = <name_perso>
+ 
+[core]
+sshCommand = "ssh -i ~/.ssh/<key_perso>"

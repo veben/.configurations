@@ -1,0 +1,40 @@
+[includeIf "gitdir:~/personal/"]
+path = "~/personal/.gitconfig.pers"
+ 
+[includeIf "gitdir:~/work/"]
+path = "~/work/.gitconfig.work"
+
+[alias]
+	f = fetch -p
+	branch-name = rev-parse --abbrev-ref HEAD
+	ba = branch -a
+	bD = branch -D
+	co = checkout
+	cob = checkout -b
+	st = status -sb
+	cleanup = clean -df
+	rollback = !git checkout . && git clean -df
+	a = add .
+	unadd = reset HEAD
+	c = commit -m
+	uncommit = reset --soft HEAD~1
+	uncommit-hard = reset --hard HEAD~1
+	pr = pull --rebase
+	rb = rebase
+	rba = rebase --abort
+	rbc = rebase --continue
+	rbs = rebase --skip
+	m = merge
+	me = merge --no-commit --no-ff
+	ma = merge --abort
+	mc = merge --continue
+	ms = merge --skip
+	publish = !git push -u origin $(git branch-name)
+	unpublish = !git push origin :$(git branch-name)
+	lg10 = !git lg -10
+	w = whatchanged
+	conf = config --list --show-origin
+	alias = !git config --list --show-origin | grep alias | cut -f2
+	rank = shortlog -sn --no-merges
+	dc = diff --cached
+	gg = grep --break --heading --line-number --color

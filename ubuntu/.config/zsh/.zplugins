@@ -1,0 +1,14 @@
+plugins=(
+    "zsh-autosuggestions/zsh-autosuggestions.zsh"
+    "zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+    "fzf/.fzf.zsh"
+    "zsh-z/zsh-z.plugin.zsh"
+)
+
+for plugin in "${plugins[@]}"; do
+    if [ -f "$ZDOTDIR/plugins/$plugin" ]; then
+        source "$ZDOTDIR/plugins/$plugin"
+    fi
+done
+
+autoload -U compinit; compinit # source after zsh-z again for autocompletion to work

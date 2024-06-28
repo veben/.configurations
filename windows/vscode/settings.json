@@ -1,0 +1,22 @@
+{
+    "security.workspace.trust.untrustedFiles": "open",
+    "remote.SSH.defaultExtensions": [
+        "gitpod.gitpod-remote-ssh"
+    ],
+    "remote.SSH.remotePlatform": {
+        "*.gitpod.io": "linux"
+    },
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "hashicorp.terraform",
+    "remote.autoForwardPortsSource": "hybrid",
+    "go.alternateTools": {},
+    "explorer.confirmDragAndDrop": false,
+    "git.mergeEditor": true,
+    "redhat.telemetry.enabled": false,
+    "workbench.startupEditor": "none",
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.iconTheme": "catppuccin-mocha"
+}

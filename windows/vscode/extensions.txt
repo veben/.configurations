@@ -1,0 +1,16 @@
+Extensions installed on WSL: Ubuntu-22.04:
+catppuccin.catppuccin-vsc
+catppuccin.catppuccin-vsc-icons
+eamodio.gitlens
+golang.go
+hashicorp.terraform
+janisdd.vscode-edit-csv
+mechatroner.rainbow-csv
+ms-azuretools.vscode-azurefunctions
+ms-azuretools.vscode-azureresourcegroups
+ms-azuretools.vscode-docker
+ms-python.debugpy
+ms-python.python
+ms-python.vscode-pylance
+ms-vscode.azure-account
+shd101wyy.markdown-preview-enhanced
