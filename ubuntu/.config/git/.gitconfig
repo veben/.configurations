@@ -1,8 +1,8 @@
-[includeIf "gitdir:~/personal/"]
-path = "~/personal/.gitconfig.pers"
+[includeIf "gitdir:~/perso/"]
+path = "~/.config/git/.gitconfig.perso"
  
-[includeIf "gitdir:~/work/"]
-path = "~/work/.gitconfig.work"
+[includeIf "gitdir:~/pro/"]
+path = "~/.config/git/.gitconfig.pro"
 
 [alias]
 	f = fetch -p

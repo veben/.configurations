@@ -3,20 +3,47 @@
 
 ## Table of Contents
 1. [Update and Upgrade](#1-update-and-upgrade)
-2. [Nerd Font Installation](#2-nerd-font-installation)
-3. [Zsh Setup](#3-zsh-setup)
-4. [Starship Installation](#4-starship-installation)
-5. [EZA Installation](#5-eza-installation)
-6. [Git Configuration](#6-git-configuration)
-7. [Docker Setup](#7-docker-setup)
-8. [Scripts](#8-scripts)
+2. [Tools Installation](#2-tools-installation)
+3. [GitHub Setup](#3-github-setup)
+4. [Nerd Font Installation](#4-nerd-font-installation)
+5. [Zsh Installation](#5-zsh-installation)
+6. [Starship Installation](#6-starship-installation)
+7. [EZA Installation](#7-eza-installation)
+8. [Docker Installation](#8-docker-installation)
+9. [Configurations Installation](#9-configurations-installation)
+10. [Scripts](#10-scripts)
 
 ## 1. Update and Upgrade
 ```sh
 sudo apt update && sudo apt upgrade -y
 ```
 
-## 2. Nerd Font Installation
+## 2. Tools installation
+- Install useful tools
+```sh
+sudo apt-get install -y xclip jq
+```
+
+## 3. GitHub Setup
+- Define your Git username replacing `<git_username>`
+```sh
+export GIT_USER=<git_username>
+```
+- Generate personal **ED25519 SSH keys**:
+```sh
+ssh-keygen -t ed25519 -C "veben" -f ~/.ssh/perso_github_$GIT_USER
+```
+- Copy public key:
+```sh
+xclip -sel clip < ~/.ssh/perso_github_$GIT_USER
+```
+- Add the key to your GitHub account
+- Test the connection:
+```sh
+ssh -T git@github.com
+```
+
+## 4. Nerd Font Installation
 - Download Ubuntu Mono Nerd Font:
 ```sh
 curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/UbuntuMono.tar.xz
@@ -40,7 +67,7 @@ fc-list | grep -i "ubuntu"
 rm UbuntuMono.tar.xz
 ```
 
-## 3. Zsh Setup
+## 5. Zsh Installation
 - Install **Zsh**:
 ```sh
 sudo apt-get install -y zsh
@@ -49,31 +76,16 @@ sudo apt-get install -y zsh
 ```sh
 chsh -s /bin/zsh
 ```
-- Copy configuration files:
-```sh
-cp .zshrc ~/.zshrc
-cp .zprofile ~/.zprofile
-cp .bash_aliases ~/.bash_aliases
-```
 
-## 4. Starship Installation
+## 6. Starship Installation
 > https://starship.rs/guide/
 
 - Install Starship
 ```sh
 curl -sS https://starship.rs/install.sh | sh
 ```
-- Verify this is at the end of `~/.zshrc`
-```plaintext
-eval "$(starship init zsh)"
-```
-- Copy Starship configuration file:
-```sh
-mkdir -p ~/.config
-cp .config/starship.toml ~/.config/starship.toml
-```
 
-## 5. Installation
+## 7. EZA Installation
 > https://github.com/eza-community/eza/blob/main/INSTALL.md
 
 Download latest version and copy it to `/usr/local/bin` folder:
@@ -84,22 +96,7 @@ sudo chown root:root eza
 sudo mv eza /usr/local/bin/eza
 ```
 
-## 6. Git Configuration
-> See: https://blog.gitguardian.com/8-easy-steps-to-set-up-multiple-git-accounts/
-
-- Create directories for personal and work repositories:
-```sh
-mkdir -p ~/personal
-mkdir -p ~/work
-```
-- Copy configurations:
-```sh
-cp .gitconfig.pers ~/personal/
-cp .gitconfig.work ~/work/
-cp .gitconfig ~/
-```
-
-## 7. Docker Setup
+## 8. Docker Installation
 > See: https://nickjanetakis.com/blog/install-docker-in-wsl-2-without-docker-desktop
 
 - Install Docker, you can ignore the warning from Docker about using WSL
@@ -137,5 +134,13 @@ ps aux | grep docker
 docker run hello-world
 ```
 
-## 8. Scripts
+## 9. Configurations Installation
+> See: https://blog.gitguardian.com/8-easy-steps-to-set-up-multiple-git-accounts/
+
+- Run the `setup.sh` script:
+```sh
+./setup.sh
+```
+
+## 10. Scripts
 See [Scripts](scripts/README.md)

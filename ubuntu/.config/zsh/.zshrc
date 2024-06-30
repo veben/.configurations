@@ -1,3 +1,8 @@
+XDG_CONFIG_HOME=$HOME/.config
+ZDOTDIR=$XDG_CONFIG_HOME/zsh
+GIT_PERSO=$HOME/perso
+GIT_PRO=$HOME/pro
+
 # Source other configurations
 configs=(
     "$ZDOTDIR/.zaliases"
