@@ -4,3 +4,21 @@ add_newline = false
 command_timeout = 1000
 
 format = """$all"""
+
+[git_branch]
+symbol = " "
+[aws]
+symbol = " "
+[golang]
+symbol = " "
+[java]
+symbol = " "
+[nodejs]
+symbol = " "
+[kotlin]
+symbol = " "
+[docker_context]
+symbol = " "
+
+[os.symbols]
+Ubuntu = " "

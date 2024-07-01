@@ -74,7 +74,7 @@
             "experimental.retroTerminalEffect": false,
             "font": 
             {
-                "face": "UbuntuMono Nerd Font Mono",
+                "face": "UbuntuMono Nerd Font",
                 "size": 11.0,
                 "weight": "normal"
             },

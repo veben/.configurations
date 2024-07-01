@@ -18,5 +18,10 @@
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "workbench.colorTheme": "Catppuccin Mocha",
-    "workbench.iconTheme": "catppuccin-mocha"
+    "workbench.iconTheme": "catppuccin-mocha",
+    "terminal.integrated.fontFamily": "UbuntuMono Nerd Font",
+    "terminal.integrated.fontWeight": "normal",
+    "terminal.integrated.fontWeightBold": "normal",
+    "editor.fontFamily": "'UbuntuMono Nerd Font', Consolas, 'Courier New', monospace",
+    "editor.fontSize": 14
 }

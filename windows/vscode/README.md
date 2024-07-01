@@ -5,8 +5,8 @@
 
 ## 2. Configuration
 ### 2.1 Manage settings and keybinds
-- Copy `settings.json` to `%LOCALAPPDATA%\Code\User` folder
-- Copy `keybindings.json` to `%LOCALAPPDATA%\Code\User` folder
+- Copy `settings.json` to `%APPDATA%\Code\User` folder
+- Copy `keybindings.json` to `%APPDATA%\Code\User` folder
 
 ### 2.2 Manage extensions
 - Install extensions:

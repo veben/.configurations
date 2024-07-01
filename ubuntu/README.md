@@ -3,14 +3,14 @@
 
 ## Table of Contents
 1. [Update and Upgrade](#1-update-and-upgrade)
-2. [Tools Installation](#2-tools-installation)
+2. [Utilities Installation](#2-utilities-installation)
 3. [GitHub Setup](#3-github-setup)
 4. [Nerd Font Installation](#4-nerd-font-installation)
 5. [Zsh Installation](#5-zsh-installation)
-6. [Starship Installation](#6-starship-installation)
-7. [EZA Installation](#7-eza-installation)
-8. [Docker Installation](#8-docker-installation)
-9. [Configurations Installation](#9-configurations-installation)
+6. [Configurations Installation](#9-configurations-installation)
+7. [Starship Installation](#6-starship-installation)
+8. [EZA Installation](#7-eza-installation)
+9. [Docker Installation](#8-docker-installation)
 10. [Scripts](#10-scripts)
 
 ## 1. Update and Upgrade
@@ -18,7 +18,7 @@
 sudo apt update && sudo apt upgrade -y
 ```
 
-## 2. Tools installation
+## 2. Utilities installation
 - Install useful tools
 ```sh
 sudo apt-get install -y xclip jq
@@ -77,15 +77,27 @@ sudo apt-get install -y zsh
 chsh -s /bin/zsh
 ```
 
-## 6. Starship Installation
+## 6. Configurations Installation
+> See: https://blog.gitguardian.com/8-easy-steps-to-set-up-multiple-git-accounts/
+
+- Run the `setup.sh` script:
+```sh
+./setup.sh
+```
+
+## 7. Starship Installation
 > https://starship.rs/guide/
 
 - Install Starship
 ```sh
 curl -sS https://starship.rs/install.sh | sh
 ```
+- Verify this line is in the `.zshrc` file
+```plaintext
+eval "$(starship init zsh)"
+```
 
-## 7. EZA Installation
+## 8. EZA Installation
 > https://github.com/eza-community/eza/blob/main/INSTALL.md
 
 Download latest version and copy it to `/usr/local/bin` folder:
@@ -96,7 +108,7 @@ sudo chown root:root eza
 sudo mv eza /usr/local/bin/eza
 ```
 
-## 8. Docker Installation
+## 9. Docker Installation
 > See: https://nickjanetakis.com/blog/install-docker-in-wsl-2-without-docker-desktop
 
 - Install Docker, you can ignore the warning from Docker about using WSL
@@ -113,13 +125,11 @@ sudo usermod -aG docker $USER
 docker --version
 docker-compose version
 ```
-
 - For Ubuntu 22.04 or Debian 10+, configure iptables:
 ```sh
 sudo update-alternatives --config iptables
 ```
-
-- Verify these lines are in the `~/.zprofile`
+- Verify these lines are in the `.zprofile` file
 ```plaintext
 if grep -q "microsoft" /proc/version > /dev/null 2>&1; then
     if service docker status 2>&1 | grep -q "is not running"; then
@@ -132,14 +142,6 @@ fi
 ```sh
 ps aux | grep docker
 docker run hello-world
-```
-
-## 9. Configurations Installation
-> See: https://blog.gitguardian.com/8-easy-steps-to-set-up-multiple-git-accounts/
-
-- Run the `setup.sh` script:
-```sh
-./setup.sh
 ```
 
 ## 10. Scripts
