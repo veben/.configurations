@@ -26,9 +26,6 @@ To make the most of your dotfiles, consider these best practices:
 
 ## Getting Started
 1. Clone the repository:
-```sh
-git clone https://github.com/yourusername/.configurations.git
-```
 2. Navigate to the specific OS directory (Windows or Ubuntu)
 3. Follow the instructions in the respective `README.md` files for setup and customization
 
