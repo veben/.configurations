@@ -2,23 +2,26 @@
 > For Ubuntu 22.04 in WSL 2
 
 ## Table of Contents
+
 1. [Update and Upgrade](#1-update-and-upgrade)
 2. [Utilities Installation](#2-utilities-installation)
 3. [GitHub Setup](#3-github-setup)
 4. [Nerd Font Installation](#4-nerd-font-installation)
 5. [Zsh Installation](#5-zsh-installation)
-6. [Configurations Installation](#9-configurations-installation)
-7. [Starship Installation](#6-starship-installation)
-8. [EZA Installation](#7-eza-installation)
-9. [Docker Installation](#8-docker-installation)
-10. [Scripts](#10-scripts)
+6. [Configurations Installation](#6-configurations-installation)
+7. [Starship Installation](#7-starship-installation)
+8. [Eza Installation](#8-eza-installation)
+9. [Fzf Installation](#9-fzf-installation)
+10. [Lazygit Installation](#10-lazygit-installation)
+11. [Docker Installation](#11-docker-installation)
+12. [Scripts](#12-scripts)
 
 ## 1. Update and Upgrade
 ```sh
 sudo apt update && sudo apt upgrade -y
 ```
 
-## 2. Utilities installation
+## 2. Utilities Installation
 - Install useful tools
 ```sh
 sudo apt-get install -y xclip jq
@@ -97,7 +100,7 @@ curl -sS https://starship.rs/install.sh | sh
 eval "$(starship init zsh)"
 ```
 
-## 8. EZA Installation
+## 8. Eza Installation
 > https://github.com/eza-community/eza/blob/main/INSTALL.md
 
 Download latest version and copy it to `/usr/local/bin` folder:
@@ -108,7 +111,42 @@ sudo chown root:root eza
 sudo mv eza /usr/local/bin/eza
 ```
 
-## 9. Docker Installation
+## 9. Fzf Installation
+> https://github.com/junegunn/fzf
+
+- Download latest version:
+```sh
+sudo apt install fzf
+```
+- Look at `fzf` version:
+```sh
+fzf -version
+```
+- For version **0.48.0** or later, add this line to `.zshrc` file to add shortcuts:
+```plaintext
+source <(fzf --zsh)
+```
+
+## 10. Lazygit Installation
+> https://github.com/jesseduffield/lazygit?tab=readme-ov-file#ubuntu
+
+- Download and install last version:
+```sh
+LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
+curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+tar xf lazygit.tar.gz lazygit
+sudo install lazygit /usr/local/bin
+```
+- Verify the installation:
+```sh
+lazygit --version
+```
+- Clean installation files:
+```sh
+rm -rf lazygit lazygit.tar.gz
+```
+
+## 11. Docker Installation
 > See: https://nickjanetakis.com/blog/install-docker-in-wsl-2-without-docker-desktop
 
 - Install Docker, you can ignore the warning from Docker about using WSL
@@ -144,5 +182,5 @@ ps aux | grep docker
 docker run hello-world
 ```
 
-## 10. Scripts
+## 12. Scripts
 See [Scripts](scripts/README.md)
