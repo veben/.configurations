@@ -5,18 +5,25 @@ command_timeout = 1000
 
 format = """$all"""
 
+
 [git_branch]
 symbol = " "
 [aws]
-symbol = " "
+symbol = " "
 [golang]
 symbol = " "
 [java]
 symbol = " "
-[nodejs]
-symbol = " "
 [kotlin]
 symbol = " "
+[python]
+symbol = ""
+[rust]
+symbol = ""
+[nodejs]
+symbol = ""
+[ruby]
+symbol = " "
 [docker_context]
 symbol = " "
 
