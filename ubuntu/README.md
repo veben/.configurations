@@ -14,7 +14,8 @@
 9. [Fzf Installation](#9-fzf-installation)
 10. [Lazygit Installation](#10-lazygit-installation)
 11. [Docker Installation](#11-docker-installation)
-12. [Scripts](#12-scripts)
+12. [NVM and Node and npm Installation](#12nvm-and-node-and-npm-installation)
+13. [Scripts](#13-scripts)
 
 ## 1. Update and Upgrade
 ```sh
@@ -182,5 +183,34 @@ ps aux | grep docker
 docker run hello-world
 ```
 
-## 12. Scripts
+## 12. NVM and Node and npm Installation
+- Install `nvm`:
+```sh
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+```
+- Launch this command to ensure ensure nvm is loaded into the current shell session
+```sh
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+```
+- Install Node and npm
+```sh
+nvm install --lts
+```
+- List available Node versions:
+```sh
+nvm list
+```
+- Switch to the LTS version of Node:
+```sh
+nvm use v20.10.0
+```
+- Check installation:
+```sh
+node -v
+npm -v
+```
+
+## 13. Scripts
 See [Scripts](scripts/README.md)
