@@ -7,6 +7,20 @@ format = """$all"""
 
 [git_branch]
 symbol = " "
+
+[git_status]
+conflicted = '🏳'
+ahead = '⇡'
+behind = '⇣'
+diverged = '⇕'
+up_to_date = ''
+untracked = '?'
+stashed = '$'
+modified = '!'
+staged = '+'
+renamed = '»'
+deleted = 'X'
+
 [aws]
 symbol = " "
 [golang]

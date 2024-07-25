@@ -1,15 +1,6 @@
 # Windows Configurations
 > For Windows 10
 
-## Table of Contents
-1. [Setups](#i-setups)
-   - [Dark Theme](#1-dark-theme)
-   - [QWERTY International Keyboard](#2-qwerty-international-keyboard)
-2. [Tools Installation](#ii-tools-installation)
-   - [WSL2 + Ubuntu 22.04](#1-wsl2--ubuntu-2204)
-   - [Windows Terminal](#2-windows-terminal)
-   - [VSCode](#3-vscode)
-
 ## I. Setups
 ### 1. Dark Theme
 Activate Dark mode using PowerShell:
@@ -23,11 +14,31 @@ Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Pe
 ```
 
 ### 2. QWERTY International Keyboard
-- Navigate to `Settings > Language Settings > Language`
-- Select the preferred language and click `Options`
-- Choose they keyboard "QWERTY United States-International"
+#### Option 1: via Powershell
+Enter these lines in Powershell:
+```sh
+$LangList = New-WinUserLanguageList en-US
+$LangList[0].InputMethodTips.Add("0409:00020409") # United States-International QWERTY keyboard
+$LangList[0].InputMethodTips.Remove("0409:00000409") # US QWERTY keyboard
+Set-WinUserLanguageList $LangList
+```
 
-## II. Tools installation
+#### Option 2: via the Interface
+- Navigate to `Settings > Time & Language > Language`
+- Click on the default Preferred Language: **English (United States)**
+- Select the preferred language and click `Options`
+- Add "United States-International" QWERTY keyboard
+- Remove "US" QWERTY keyboard
+
+## II. Nerd Font Installation
+- Download Ubuntu Nerd Font:
+```sh
+curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/UbuntuMono.zip
+```
+- Extract all the fonts
+- Select all fonts > Right click > Install
+
+## III. Tools Installation
 ### 1. WSL2 + Ubuntu 22.04
 For detailed instructions, see [WSL2 + Ubuntu 22.04 Setup Guide](wsl2/README.md)
 
