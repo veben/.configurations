@@ -97,12 +97,6 @@
                 "hidden": false,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
-            },
-            {
-                "guid": "{e5a83caa-4c73-52b3-ae6b-bc438d721ef9}",
-                "hidden": false,
-                "name": "Ubuntu 22.04.3 LTS",
-                "source": "CanonicalGroupLimited.Ubuntu22.04LTS_79rhkp1fndgsc"
             }
         ]
     },
@@ -111,7 +105,7 @@
             "name": "Catppuccin Mocha",
             "cursorColor": "#F5E0DC",
             "selectionBackground": "#585B70",
-            "background": "#181b1a",
+            "background": "#0e1117",
             "foreground": "#CDD6F4",
             "black": "#45475A",
             "red": "#F38BA8",
@@ -132,18 +126,17 @@
         }
     ],
     "startOnUserLogin": true,
-    "theme": "system",
     "themes": [
         {
             "name": "Catppuccin Mocha",
             "tab": {
-                "background": "#181b1a",
+                "background": "#0e1117",
                 "showCloseButton": "always",
                 "unfocusedBackground": null
             },
             "tabRow": {
-                "background": "#181b1a",
-                "unfocusedBackground": "#181b1a"
+                "background": "#0e1117",
+                "unfocusedBackground": "#0e1117"
             },
             "window": {
                 "applicationTheme": "dark"

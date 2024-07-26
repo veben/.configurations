@@ -11,10 +11,10 @@ config.font = wezterm.font('UbuntuMono Nerd Font', { weight = 'DemiLight' })
 config.color_scheme = "Catppuccin Mocha"
 
 local custom = wezterm.color.get_builtin_schemes()["Catppuccin Mocha"]
-custom.background = "#181b1a"
-custom.tab_bar.background = "#181b1a"
-custom.tab_bar.inactive_tab.bg_color = "#181b1a"
-custom.tab_bar.new_tab.bg_color = "#181b1a"
+custom.background = "#0e1117"
+custom.tab_bar.background = "#0e1117"
+custom.tab_bar.inactive_tab.bg_color = "#0e1117"
+custom.tab_bar.new_tab.bg_color = "#0e1117"
 config.color_schemes = {
   ["OLEDppuccin"] = custom,
 }
