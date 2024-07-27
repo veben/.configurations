@@ -6,6 +6,9 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
+use_dead_keys = false
+scrollback_lines = 5000
+
 ------------- Theme -------------
 config.font = wezterm.font('UbuntuMono Nerd Font', { weight = 'DemiLight' })
 config.color_scheme = "Catppuccin Mocha"
@@ -20,17 +23,47 @@ config.color_schemes = {
 }
 config.color_scheme = "OLEDppuccin"
 
+
 ------------- Shortcuts -------------
+disable_default_key_bindings = true
+act = wezterm.action
 config.keys = {
-  { key = 'w', mods = 'CTRL', action = wezterm.action.CloseCurrentPane { confirm = false } },
-  { key = 't', mods = 'CTRL', action = wezterm.action.SpawnTab 'CurrentPaneDomain' }
+  {
+    key = 'c',
+    mods = 'CTRL',
+    action = wezterm.action_callback(function(window, pane)
+      local has_selection = window:get_selection_text_for_pane(pane) ~= ''
+      if has_selection then
+        window:perform_action(act.CopyTo 'ClipboardAndPrimarySelection', pane)
+        window:perform_action(act.ClearSelection, pane)
+      else
+        window:perform_action(act.SendKey { key = 'c', mods = 'CTRL' }, pane)
+      end
+    end),
+  },
+  { key = 'v', mods = 'CTRL', action = act.PasteFrom("Clipboard") },
+
+  { key = 't', mods = 'CTRL', action = act.SpawnTab 'CurrentPaneDomain' },
+  { key = 'w', mods = 'CTRL', action = act.CloseCurrentPane { confirm = false } },
+
+  { key = '+', mods = 'CTRL', action = act.IncreaseFontSize },
+  { key = '-', mods = 'CTRL', action = act.DecreaseFontSize },
+
+  { key = 'DownArrow', mods = 'CTRL|ALT', action = act.SplitVertical { domain = 'CurrentPaneDomain' }, },
+  { key = 'RightArrow', mods = 'CTRL|ALT', action = act.SplitHorizontal { domain = 'CurrentPaneDomain' }, },
+  { key = "UpArrow", mods = "CTRL", action = act.ActivatePaneDirection("Up") },
+  { key = "DownArrow", mods = "CTRL", action = act.ActivatePaneDirection("Down") },
+  { key = "LeftArrow", mods = "CTRL", action = act.ActivatePaneDirection("Left") },
+  { key = "RightArrow", mods = "CTRL", action = act.ActivatePaneDirection("Right") },
 }
 
 ------------- Others -------------
 config.default_domain = 'WSL:Ubuntu-22.04'
-config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
+config.window_decorations = "INTEGRATED_BUTTONS | RESIZE"
+config.integrated_title_buttons = {}
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
-config.hide_tab_bar_if_only_one_tab = true
+config.hide_tab_bar_if_only_one_tab = false
+config.default_cursor_style = 'BlinkingUnderline'
 
 return config
