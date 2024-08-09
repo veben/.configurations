@@ -19,6 +19,7 @@ alias ports='sudo netstat -tulanp'
 # Allow wget resume
 alias wget='wget -c'
 alias gh='history|grep'
+alias b='batcat'
 
 # Navigation
 alias dev="cd ~/env/dev/"
@@ -71,7 +72,7 @@ alias kcpp="k config use-context sypel-bison"
 alias kcp="k config use-context sypel-beluga"
 alias kpd="k delete pod --field-selector=status.phase==Succeeded"
 alias kpg="k get pods"
-alias kjd="k delete jobs --field-selector status.successful=1" 
+alias kjd="k delete jobs --field-selector status.successful=1"
 alias kjdold="k get jobs -o go-template --template '{{range .items}}{{.metadata.name}} {{.metadata.creationTimestamp}}{{"\n"}}{{end}}' | awk '$2 <= "'$(date -d'now-${1} days' -Ins --utc | sed 's/+0000/Z/')'" { print $1 }' | xargs --no-run-if-empty k delete job"
 kpx() {
 if [ "$#" -eq 2 ]; then

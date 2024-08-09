@@ -15,7 +15,8 @@
 10. [Lazygit Installation](#10-lazygit-installation)
 11. [Docker Installation](#11-docker-installation)
 12. [NVM and Node and npm Installation](#12nvm-and-node-and-npm-installation)
-13. [Scripts](#13-scripts)
+13. [Batcat](#13-batcat)
+14. [Scripts](#14-scripts)
 
 ## 1. Update and Upgrade
 ```sh
@@ -96,7 +97,7 @@ chsh -s /bin/zsh
 ```sh
 curl -sS https://starship.rs/install.sh | sh
 ```
-- Verify this line is in the `.zshrc` file
+- Verify this line is in the `.zplugins` file
 ```plaintext
 eval "$(starship init zsh)"
 ```
@@ -123,9 +124,14 @@ sudo apt install fzf
 ```sh
 fzf -version
 ```
-- For version **0.48.0** or later, add this line to `.zshrc` file to add shortcuts:
+- For version **0.48.0** or later, add this line to `.zplugins` file to add shortcuts and completion...:
 ```plaintext
 source <(fzf --zsh)
+```
+- ...instead of these lines:
+```plaintext
+[ -f /usr/share/doc/fzf/examples/key-bindings.zsh ] && source /usr/share/doc/fzf/examples/key-bindings.zsh
+[ -f /usr/share/doc/fzf/examples/completion.zsh ] && source /usr/share/doc/fzf/examples/completion.zsh
 ```
 
 ## 10. Lazygit Installation
@@ -212,5 +218,15 @@ node -v
 npm -v
 ```
 
-## 13. Scripts
+## 13. Batcat
+- Install `batcat`:
+```sh
+sudo apt install bat
+```
+- Verify installation:
+```sh
+batcat --version
+```
+
+## 14. Scripts
 See [Scripts](scripts/README.md)

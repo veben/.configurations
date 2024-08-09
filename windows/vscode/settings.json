@@ -1,83 +1,90 @@
 {
-    // open json editor for settings
-    "workbench.settings.editor": "json",
-    // ---------------- Theme ----------------
-    "workbench.colorTheme": "Catppuccin Mocha",
-    "catppuccin.colorOverrides": {
-      "mocha": {
-        "base": "#191918", // #1f1e1e
-        "mantle": "#191918",
-        "crust": "#191918",
-      },
+  // open json editor for settings
+  "workbench.settings.editor": "json",
+  // ---------------- Theme ----------------
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "catppuccin.colorOverrides": {
+    "mocha": {
+      "base": "#191918", // #1f1e1e
+      "mantle": "#191918",
+      "crust": "#191918",
     },
-    // use your accent on the statusBar as well
-    "catppuccin.customUIColors": {
-      "mocha": {
-        "statusBar.foreground": "accent",
-      },
+  },
+  // use your accent on the statusBar as well
+  "catppuccin.customUIColors": {
+    "mocha": {
+      "statusBar.foreground": "accent",
     },
-    // ---------------- Icons ----------------
-    "workbench.iconTheme": "catppuccin-mocha",
-    // ---------------- Fonts ----------------
-    "editor.fontFamily": "UbuntuMono Nerd Font",
-    "editor.inlayHints.fontFamily": "UbuntuMono Nerd Font",
-    "editor.codeLensFontFamily": "UbuntuMono Nerd Font",
-    "editor.fontSize": 14,
-    "terminal.integrated.fontFamily": "UbuntuMono Nerd Font",
-    "terminal.integrated.fontWeight": "normal",
-    "terminal.integrated.fontWeightBold": "normal",
-    "terminal.integrated.fontSize": 14,
-    "chat.editor.fontFamily": "UbuntuMono Nerd Font",
-    "debug.console.fontFamily": "UbuntuMono Nerd Font",
-    "notebook.output.fontFamily": "UbuntuMono Nerd Font",
-    "markdown.preview.fontFamily": "UbuntuMono Nerd Font",
-    "scm.inputFontFamily": "UbuntuMono Nerd Font",
-    // ---------------- UI ----------------
-    "editor.minimap.enabled": false,
-    "window.commandCenter": false,
-    "editor.scrollbar.vertical": "auto",
-    "window.titleBarStyle": "custom",
-    "editor.scrollbar.horizontal": "auto",
-    // ---------------- Terminal ----------------
-    "terminal.integrated.defaultProfile.windows": "Ubuntu-22.04 (WSL)",
-
-    // ---------------- APC ----------------
-    "apc.activityBar": {
-      "position": "bottom",
-      "hideSettings": true,
-      "size": 28
-    },
-    "apc.electron": {
-      "titleBarStyle": "hiddenInset",
-      "trafficLightPosition": {
-        "x": 12,
-        "y": 10
-      }
-    },
-    "apc.font.family": "UbuntuMono Nerd Font",
-    "apc.monospace.font.family": "UbuntuMono Nerd Font",
-    "apc.statusBar": {
-      "position": "editor-bottom",
-      "height": 28,
-      "fontSize": 12
-    },
-
-    // ---------------- Other ----------------
-    "workbench.startupEditor": "none",
-    "editor.tabSize": 2,
-    "editor.linkedEditing": true,
-    "files.trimTrailingWhitespace": false,
-    "editor.formatOnSave": true,
-    "editor.bracketPairColorization.enabled": true,
-    "editor.guides.bracketPairs": true,
-    "remote.autoForwardPortsSource": "hybrid",
-    "explorer.confirmDragAndDrop": false,
-    "git.mergeEditor": true,
-    "[json]": {
-      "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "markdown-preview-enhanced.previewTheme": "github-dark.css",
-    "remote.SSH.remotePlatform": {
-      "*.gitpod.io": "linux"
-    },
-  }
+  },
+  "catppuccin.italicKeywords": false,
+  // ---------------- Icons ----------------
+  "workbench.iconTheme": "catppuccin-mocha",
+  // ---------------- Fonts ----------------
+  "editor.fontFamily": "UbuntuMono Nerd Font",
+  "editor.inlayHints.fontFamily": "UbuntuMono Nerd Font",
+  "editor.codeLensFontFamily": "UbuntuMono Nerd Font",
+  "editor.fontSize": 14,
+  "terminal.integrated.fontFamily": "UbuntuMono Nerd Font",
+  "terminal.integrated.fontWeight": "normal",
+  "terminal.integrated.fontWeightBold": "normal",
+  "terminal.integrated.fontSize": 14,
+  "chat.editor.fontFamily": "UbuntuMono Nerd Font",
+  "debug.console.fontFamily": "UbuntuMono Nerd Font",
+  "notebook.output.fontFamily": "UbuntuMono Nerd Font",
+  "markdown.preview.fontFamily": "UbuntuMono Nerd Font",
+  "scm.inputFontFamily": "UbuntuMono Nerd Font",
+  // ---------------- UI ----------------
+  "editor.minimap.enabled": false,
+  "window.commandCenter": false,
+  "editor.scrollbar.vertical": "auto",
+  "window.titleBarStyle": "custom",
+  "editor.scrollbar.horizontal": "auto",
+  // ---------------- Terminal ----------------
+  "terminal.integrated.defaultProfile.windows": "Ubuntu-22.04 (WSL)",
+  "terminal.external.windowsExec": "C:\\Program Files\\WezTerm\\wezterm-gui.exe",
+  // "terminal.external.osxExec": "",
+  // "terminal.external.linuxExec": "wezterm",
+  // ---------------- APC ----------------
+  "apc.activityBar": {
+    "position": "bottom",
+    "hideSettings": true,
+    "size": 28
+  },
+  "apc.electron": {
+    "titleBarStyle": "hiddenInset",
+    "trafficLightPosition": {
+      "x": 12,
+      "y": 10
+    }
+  },
+  "apc.font.family": "UbuntuMono Nerd Font",
+  "apc.monospace.font.family": "UbuntuMono Nerd Font",
+  "apc.statusBar": {
+    "position": "editor-bottom",
+    "height": 28,
+    "fontSize": 12
+  },
+  // ---------------- Other ----------------
+  "workbench.startupEditor": "none",
+  "editor.tabSize": 2,
+  "editor.linkedEditing": true,
+  "files.trimTrailingWhitespace": true,
+  "editor.formatOnSave": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "remote.autoForwardPortsSource": "hybrid",
+  "explorer.confirmDragAndDrop": false,
+  "git.mergeEditor": true,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "markdown-preview-enhanced.previewTheme": "github-dark.css",
+  "remote.SSH.remotePlatform": {
+    "*.gitpod.io": "linux"
+  },
+  // ---------------- Python ----------------
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": false
+  },
+}

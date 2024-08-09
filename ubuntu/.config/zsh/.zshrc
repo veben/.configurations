@@ -14,11 +14,3 @@ for config in "${configs[@]}"; do
         source "$config"
     fi
 done
-
-# Enable Bash completion compatibility
-autoload -U +X bashcompinit && bashcompinit
-# Set up Terraform completion
-complete -C /usr/bin/terraform terraform
-
-# Starship
-eval "$(starship init zsh)"
