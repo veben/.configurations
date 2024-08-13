@@ -1,44 +1,187 @@
+
 "$schema" = 'https://starship.rs/config-schema.json'
 
-add_newline = false
 command_timeout = 1000
 
-format = """$all"""
+format = """
+$os\
+$all
+"""
 
-[git_branch]
-symbol = " "
+palette = 'catppuccin_mocha'
 
-[git_status]
-conflicted = '🏳'
-ahead = '⇡'
-behind = '⇣'
-diverged = '⇕'
-up_to_date = ''
-untracked = '?'
-stashed = '$'
-modified = '!'
-staged = '+'
-renamed = '»'
-deleted = 'X'
+[palettes.catppuccin_mocha]
+rosewater = "#dc8a78"
+flamingo = "#f2a272"
+pink = "#f5c2e7"
+mauve = "#dDB6F2"
+red = "#f38ba8"
+maroon = "#ea999c"
+peach = "#fab387"
+yellow = "#f9e2ae"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#7dc4e4"
+lavender = "#c5b6e5"
+text = "#c6d0f5"
+subtext1 = "#b5b5c3"
+subtext0 = "#a5a5b5"
+overlay2 = "#e5e5e5"
+overlay1 = "#d9d9d9"
+overlay0 = "#c7c7c7"
+surface2 = "#f5f5f5"
+surface1 = "#eaeaea"
+surface0 = "#f0f0f0"
+base = "#1e1e2e"
+mantle = "#1a1a2e"
+crust = "#151515"
 
-[aws]
-symbol = " "
-[golang]
-symbol = " "
-[java]
-symbol = " "
-[kotlin]
-symbol = " "
-[python]
-symbol = " "
-[rust]
-symbol = " "
-[nodejs]
-symbol = " "
-[ruby]
-symbol = " "
-[docker_context]
-symbol = " "
+[palettes.catppuccin_latte]
+rosewater = "#dc8a78"
+flamingo = "#dd7878"
+pink = "#ea76cb"
+mauve = "#8839ef"
+red = "#d20f39"
+maroon = "#e64553"
+peach = "#fe640b"
+yellow = "#df8e1d"
+green = "#40a02b"
+teal = "#179299"
+sky = "#04a5e5"
+sapphire = "#209fb5"
+blue = "#1e66f5"
+lavender = "#7287fd"
+text = "#4c4f69"
+subtext1 = "#5c5f77"
+subtext0 = "#6c6f85"
+overlay2 = "#7c7f93"
+overlay1 = "#8c8fa1"
+overlay0 = "#9ca0b0"
+surface2 = "#acb0be"
+surface1 = "#bcc0cc"
+surface0 = "#ccd0da"
+base = "#eff1f5"
+mantle = "#e6e9ef"
+crust = "#dce0e8"
+
+[os]
+disabled = false
+style = "bg:rosewater fg:base"
+format = '[](rosewater)[$symbol]($style)[](fg:rosewater bg:rosewater)'
 
 [os.symbols]
-Ubuntu = " "
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = ""
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
+[username]
+show_always = true
+style_user = "bg:rosewater fg:base"
+style_root = "bg:rosewater fg:base"
+format = '[$user]($style)[](fg:rosewater)'
+
+[directory]
+style = "fg:base bg:flamingo"
+format = "[ $path]($style)[](fg:flamingo)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[git_branch]
+symbol = ""
+style = "fg:base bg:green"
+format = '[ $symbol $branch]($style)'
+
+[git_status]
+style = "fg:base bg:green"
+format = '[ $all_status$ahead_behind]($style)[](fg:green)'
+
+[nodejs]
+symbol = ""
+style = "fg:base bg:green"
+format = '[ $symbol $version]($style)[](fg:green)'
+
+[rust]
+symbol = ""
+style = "fg:base bg:maroon"
+format = '[ $symbol $version]($style)[](fg:maroon)'
+
+[golang]
+symbol = ""
+style = "fg:base bg:teal"
+format = '[ $symbol $version]($style)[](fg:teal)'
+
+[php]
+symbol = ""
+style = "fg:base bg:blue"
+format = '[ $symbol $version]($style)[](fg:blue)'
+
+[java]
+symbol = " "
+style = "fg:base bg:red"
+format = '[ $symbol $version]($style)[](fg:red)'
+
+[kotlin]
+symbol = ""
+style = "fg:base bg:peach"
+format = '[ $symbol $version]($style)[](fg:peach)'
+
+[python]
+symbol = ""
+style = "fg:base bg:yellow"
+format = '[ $symbol $version]($style)[](fg:yellow)'
+
+[ruby]
+symbol = " "
+style = "fg:base bg:red"
+format = '[ $symbol $version]($style)[](fg:red)'
+
+[docker_context]
+symbol = ""
+style = "fg:base bg:sky"
+format = '[ $symbol $version]($style)[](fg:sky)'
+
+[aws]
+style = 'fg:base bg:peach'
+symbol = " "
+format = '[ $symbol$profile (\($region\) )(\[ $duration\] )]($style)[](fg:peach)'
+disabled = true
+
+[kubernetes]
+style = 'fg:base bg:sapphire'
+format = '[ $symbol$context(\($namespace\))]($style)[](fg:sapphire)'
+symbol = "🅺 "
+disabled = true
+
+[time]
+disabled = true
+time_format = "%R"
+style = "bg:peach"
+format = '[[  $time ](fg:base bg:purple)[](fg:purple)]($style)'
+
+[line_break]
+disabled = false

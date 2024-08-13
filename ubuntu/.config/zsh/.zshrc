@@ -6,6 +6,7 @@ GIT_PRO=$HOME/pro
 # Source other configurations
 configs=(
     "$ZDOTDIR/.zaliases"
+    "$ZDOTDIR/.zprofile"
     "$ZDOTDIR/.zplugins"
     "$ZDOTDIR/.zhistory"
 )
@@ -14,3 +15,4 @@ for config in "${configs[@]}"; do
         source "$config"
     fi
 done
+

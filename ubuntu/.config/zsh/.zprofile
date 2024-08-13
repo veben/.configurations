@@ -1,7 +1,5 @@
-# Add Golang to the PATH
+export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:/usr/local/go/bin
-
-# Add Pulumi to the PATH
 export PATH=$PATH:$HOME/.pulumi/bin
 
 # Install Ruby Gems to ~/gems

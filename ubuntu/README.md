@@ -15,8 +15,9 @@
 10. [Lazygit Installation](#10-lazygit-installation)
 11. [Docker Installation](#11-docker-installation)
 12. [NVM and Node and npm Installation](#12nvm-and-node-and-npm-installation)
-13. [Batcat](#13-batcat)
-14. [Scripts](#14-scripts)
+13. [Batcat Installation](#13-batcat-installation)
+14. [Scripts Deployment](#14-scripts-deployment)
+15. [Root User Configuration](#15-root-user-configuration)
 
 ## 1. Update and Upgrade
 ```sh
@@ -77,7 +78,7 @@ rm UbuntuMono.tar.xz
 ```sh
 sudo apt-get install -y zsh
 ```
-- Set as default shell:
+- Set zsh as default shell:
 ```sh
 chsh -s /bin/zsh
 ```
@@ -218,7 +219,7 @@ node -v
 npm -v
 ```
 
-## 13. Batcat
+## 13. Batcat Installation
 - Install `batcat`:
 ```sh
 sudo apt install bat
@@ -228,5 +229,19 @@ sudo apt install bat
 batcat --version
 ```
 
-## 14. Scripts
+## 14. Scripts Deployment
 See [Scripts](scripts/README.md)
+
+## 15. Root User Configuration
+- Connect as **root**
+```sh
+sudo su -
+```
+- Set zsh as default shell:
+```sh
+chsh -s /bin/zsh
+```
+- Run the `setup_roo.sh` script:
+```sh
+./setup_root.sh
+```
