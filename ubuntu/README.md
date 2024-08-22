@@ -16,8 +16,9 @@
 11. [Docker Installation](#11-docker-installation)
 12. [NVM and Node and npm Installation](#12nvm-and-node-and-npm-installation)
 13. [Batcat Installation](#13-batcat-installation)
-14. [Scripts Deployment](#14-scripts-deployment)
-15. [Root User Configuration](#15-root-user-configuration)
+14. [Fastfetch Installation](#14-fastfetch-installation)
+15. [Scripts Deployment](#15-scripts-deployment)
+16. [Root User Configuration](#16-root-user-configuration)
 
 ## 1. Update and Upgrade
 ```sh
@@ -229,10 +230,26 @@ sudo apt install bat
 batcat --version
 ```
 
-## 14. Scripts Deployment
+## 14. Fastfetch Installation
+> See: https://github.com/fastfetch-cli/fastfetch?tab=readme-ov-file
+
+- Add `ppa:zhangsongcui3371/fastfetch` package:
+```sh
+sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
+```
+- Update the package list:
+```sh
+sudo apt update
+```
+- Install Fastfetch:
+```sh
+sudo apt install fastfetch
+```
+
+## 15. Scripts Deployment
 See [Scripts](scripts/README.md)
 
-## 15. Root User Configuration
+## 16. Root User Configuration
 - Connect as **root**
 ```sh
 sudo su -

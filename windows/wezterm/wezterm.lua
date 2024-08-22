@@ -66,4 +66,10 @@ config.tab_bar_at_bottom = true
 config.hide_tab_bar_if_only_one_tab = false
 config.default_cursor_style = 'BlinkingUnderline'
 
+-- Full screen on startup
+wezterm.on("gui-startup", function()
+  local tab, pane, window = wezterm.mux.spawn_window{}
+  window:gui_window():maximize()
+end)
+
 return config

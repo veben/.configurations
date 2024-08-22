@@ -16,3 +16,8 @@ for config in "${configs[@]}"; do
     fi
 done
 
+# Run Fastfetch if it's installed
+if command -v fastfetch &> /dev/null
+then
+    fastfetch
+fi
