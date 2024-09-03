@@ -17,8 +17,9 @@
 12. [NVM and Node and npm Installation](#12nvm-and-node-and-npm-installation)
 13. [Batcat Installation](#13-batcat-installation)
 14. [Fastfetch Installation](#14-fastfetch-installation)
-15. [Scripts Deployment](#15-scripts-deployment)
-16. [Root User Configuration](#16-root-user-configuration)
+15. [K9s Installation](#15-k9s-installation)
+16. [Scripts Deployment](#16-scripts-deployment)
+17. [Root User Configuration](#17-root-user-configuration)
 
 ## 1. Update and Upgrade
 ```sh
@@ -229,6 +230,10 @@ sudo apt install bat
 ```sh
 batcat --version
 ```
+- Rebuild bat's cache to load Catpuccin Mocha theme:
+```sh
+bat cache --build
+```
 
 ## 14. Fastfetch Installation
 > See: https://github.com/fastfetch-cli/fastfetch?tab=readme-ov-file
@@ -246,10 +251,31 @@ sudo apt update
 sudo apt install fastfetch
 ```
 
-## 15. Scripts Deployment
+## 15. K9s Installation
+> See: https://k9scli.io/topics/install/
+
+- Clone the repository
+```sh
+git clone git@github.com:derailed/k9s.git
+```
+- Build
+```sh
+cd k9s
+make build
+```
+- Move the executable
+```sh
+sudo mv k9s /usr/local/bin/
+```
+- Test
+```sh
+k9s
+```
+
+## 16. Scripts Deployment
 See [Scripts](scripts/README.md)
 
-## 16. Root User Configuration
+## 17. Root User Configuration
 - Connect as **root**
 ```sh
 sudo su -

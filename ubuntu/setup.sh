@@ -16,8 +16,11 @@ mkdir -p $XDG_CONFIG_HOME
 echo $XDG_CONFIG_HOME
 
 echo "Copy configurations..."
-cp -r .config/zsh/ $XDG_CONFIG_HOME
+cp -r .config/bat/ $XDG_CONFIG_HOME
 cp -r .config/git/ $XDG_CONFIG_HOME
+cp -r .config/k9s/ $XDG_CONFIG_HOME
+cp -r .config/lazygit/ $XDG_CONFIG_HOME
+cp -r .config/zsh/ $XDG_CONFIG_HOME
 cp -r .config/starship.toml $XDG_CONFIG_HOME
 
 echo "Overwrite personal user and email in git configurations"
