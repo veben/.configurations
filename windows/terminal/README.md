@@ -19,14 +19,4 @@ Add-AppxPackage .\Microsoft.WindowsTerminal_1.7.1033.0_8wekyb3d8bbwe.msixbundle
 ```
 
 ## 2. Configuration
-
-### 2.1 Install Nerd Font
-- Download Ubuntu Nerd Font:
-```sh
-curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/UbuntuMono.zip
-```
-- Extract all the fonts
-- Select all fonts > Right click > Install
-
-### 2.2 Copy the settings
-- Copy `settings.json` to `%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState` folder
+Copy `settings.json` to `%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState` folder

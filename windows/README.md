@@ -42,8 +42,8 @@ curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Ubuntu
 ### 1. WSL2 + Ubuntu 22.04
 For detailed instructions, see [WSL2 + Ubuntu 22.04 Setup Guide](wsl2/README.md)
 
-### 2. Windows Terminal
-For configuration and customization, refer to [Windows Terminal Setup](terminal/README.md)
+### 2. Wezterm
+For configuration and customization, refer to [Wezterm Setup](wezterm/README.md)
 
 ### 3. VSCode
 For installation and settings, check [VSCode Setup](vscode/README.md)
