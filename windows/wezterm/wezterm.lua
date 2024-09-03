@@ -60,6 +60,7 @@ config.keys = {
 ------------- Others -------------
 config.default_domain = 'WSL:Ubuntu-22.04'
 config.window_decorations = "INTEGRATED_BUTTONS | RESIZE"
+config.window_background_opacity = 1.0
 config.integrated_title_buttons = {}
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true

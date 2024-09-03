@@ -8,6 +8,8 @@ $os\
 $all
 """
 
+right_format = """$cmd_duration"""
+
 palette = 'catppuccin_mocha'
 
 [palettes.catppuccin_mocha]
@@ -68,8 +70,8 @@ crust = "#dce0e8"
 
 [os]
 disabled = false
-style = "bg:rosewater fg:base"
-format = '[](rosewater)[$symbol]($style)[](fg:rosewater bg:rosewater)'
+style = "bg:surface0 fg:base"
+format = '[](surface0)[$symbol]($style)[](fg:surface0 bg:surface0)'
 
 [os.symbols]
 Windows = "󰍲"
@@ -94,9 +96,9 @@ RedHatEnterprise = "󱄛"
 
 [username]
 show_always = true
-style_user = "bg:rosewater fg:base"
-style_root = "bg:rosewater fg:base"
-format = '[$user]($style)[](fg:rosewater)'
+style_user = "bg:surface0 fg:base"
+style_root = "bg:surface0 fg:base"
+format = '[$user]($style)[](fg:surface0)'
 
 [directory]
 style = "fg:base bg:flamingo"
@@ -178,10 +180,10 @@ symbol = "🅺 "
 disabled = true
 
 [time]
-disabled = true
 time_format = "%R"
 style = "bg:peach"
 format = '[[  $time ](fg:base bg:purple)[](fg:purple)]($style)'
+disabled = true
 
 [line_break]
 disabled = false
