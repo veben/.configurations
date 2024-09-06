@@ -7,12 +7,12 @@
 ### 2.1 Manage settings and keybinds
 Copy `settings.json` to `%APPDATA%\Code\User` folder
 
-
-### 2.1 Manage keybinds
+### 2.2 Manage keybinds
 Copy `keybindings.json` to `%APPDATA%\Code\User` folder
 
 ### 2.3 Manage extensions
 #### Install extensions for VSCode local
+> Use Powershell
 - Install extensions:
 ```sh
 for /f "tokens=*" %f in (local-extensions.txt) do code --install-extension %f
@@ -23,6 +23,7 @@ code --list-extensions > local-extensions.txt
 ```
 
 #### Install extensions for VSCode in WSL
+> Use Terminal with WSL
 - Install extensions:
 ```sh
 cat extensions.txt | xargs -L 1 code --install-extension

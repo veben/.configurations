@@ -9,7 +9,7 @@ With recent versions of Windows, Windows terminal is installed by default.
 ### 1.2 Install it from store
 > Recommanded Install Windows terminal from store or clicking here: https://www.microsoft.com/fr-fr/p/windows-terminal-preview/9n0dx20hk701?rtc=1&activetab=pivot:overviewtab
 
-### 1.3 Install it from Gitub
+### 1.3 Install it from Github
 > Do this method if the previous are not available
 
 1. Download last stable release from [here](https://github.com/microsoft/terminal/releases)

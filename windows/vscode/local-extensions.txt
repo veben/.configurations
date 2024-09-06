@@ -6,4 +6,6 @@ ms-vscode-remote.remote-ssh
 ms-vscode-remote.remote-ssh-edit
 ms-vscode-remote.remote-wsl
 ms-vscode.remote-explorer
+pomdtr.excalidraw-editor
 shd101wyy.markdown-preview-enhanced
+yzane.markdown-pdf

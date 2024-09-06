@@ -1,13 +1,11 @@
 {
   // open json editor for settings
   "workbench.settings.editor": "json",
-  // ---------------- Theme ----------------
-  "workbench.colorTheme": "Catppuccin Mocha",
   "catppuccin.colorOverrides": {
     "mocha": {
-      "base": "#191918", // #1f1e1e
-      "mantle": "#191918",
-      "crust": "#191918",
+      "base": "#121212", // #1f1e1e
+      "mantle": "#121212", // #191918
+      "crust": "#121212",
     },
   },
   // use your accent on the statusBar as well
@@ -87,4 +85,9 @@
     "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnSave": false
   },
+  "go.toolsManagement.autoUpdate": true,
+  "workbench.colorTheme": "Catppuccin Mocha",
+
+  // Excalidraw
+  "excalidraw.theme": "auto",
 }

@@ -7,7 +7,7 @@ echo $XDG_CONFIG_HOME
 
 echo "Copy configurations..."
 cp -r .config/zsh/ $XDG_CONFIG_HOME
-cp -r .config/starship.toml $XDG_CONFIG_HOME
+cp .config/starship.toml $XDG_CONFIG_HOME
 
 echo "Create symbolic links for configurations..."
 ln -sf $XDG_CONFIG_HOME/zsh/.zshrc $HOME/.zshrc
