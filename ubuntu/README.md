@@ -14,7 +14,7 @@
 9. [Fzf Installation](#9-fzf-installation)
 10. [Lazygit Installation](#10-lazygit-installation)
 11. [Docker Installation](#11-docker-installation)
-12. [NVM and Node and npm Installation](#12nvm-and-node-and-npm-installation)
+12. [NVM and Node and npm Installation](#12-nvm-and-node-and-npm-installation)
 13. [Batcat Installation](#13-batcat-installation)
 14. [Fastfetch Installation](#14-fastfetch-installation)
 15. [K9s Installation](#15-k9s-installation)
