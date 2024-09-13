@@ -22,16 +22,5 @@ for /f "tokens=*" %f in (local-extensions.txt) do code --install-extension %f
 code --list-extensions > local-extensions.txt
 ```
 
-#### Install extensions for VSCode in WSL
-> Use Terminal with WSL
-- Install extensions:
-```sh
-cat extensions.txt | xargs -L 1 code --install-extension
-```
-- If you need to backup again the extensions:
-```sh
-code --list-extensions > wsl-extensions.txt
-```
-
 #### Configure Markdown Preview Enhancer
 Copy `style.less` file in `%USERPROFILE%\.crossnote` folder

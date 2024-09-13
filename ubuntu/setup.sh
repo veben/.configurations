@@ -20,6 +20,7 @@ cp -r .config/bat/ $XDG_CONFIG_HOME
 cp -r .config/git/ $XDG_CONFIG_HOME
 cp -r .config/k9s/ $XDG_CONFIG_HOME
 cp -r .config/lazygit/ $XDG_CONFIG_HOME
+cp -r .config/vscode/ $XDG_CONFIG_HOME
 cp -r .config/zsh/ $XDG_CONFIG_HOME
 cp .config/starship.toml $XDG_CONFIG_HOME
 cp .local/state/crossnote/style.less $HOME/.local/state/crossnote/
@@ -31,7 +32,11 @@ sed -i 's/<key_perso>/perso_github_$GIT_USER/g' $XDG_CONFIG_HOME/git/.gitconfig.
 
 echo "Create symbolic links for configurations..."
 ln -sf $XDG_CONFIG_HOME/git/.gitconfig $HOME/.gitconfig
+ln -sf $XDG_CONFIG_HOME/vscode/settings.json $HOME/.vscode-server/data/Machine/settings.json
 ln -sf $XDG_CONFIG_HOME/zsh/.zshrc $HOME/.zshrc
+
+echo "Install VSCode extensions"
+cat $XDG_CONFIG_HOME/vscode/wsl-extensions.txt | xargs -L 1 code --install-extension
 
 echo "Create ZSH cache folder: "
 mkdir -p $HOME/.cache/zsh/
