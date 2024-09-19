@@ -1,0 +1,13 @@
+.theme-dark {
+  --background-primary: #121212;
+  --background-secondary: #121212;
+  --background-secondary-alt: #121212;
+  --text-selection: rgb(114, 135, 253, 0.6);
+  /* Catppuccin Mocha blue with 30% opacity */
+
+}
+
+.ctp-full-palette .HyperMD-header .cm-formatting-header {
+  color: rgb(var(--ctp-bold, var(--ctp-text)));
+  font-size: 75% !important;
+}

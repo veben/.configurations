@@ -1,4 +1,4 @@
-# Windows Terminal configuration
+# VScode installation and configuration
 
 ## 1. Installation
 > See: https://code.visualstudio.com/download

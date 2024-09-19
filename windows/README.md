@@ -47,3 +47,9 @@ For configuration and customization, refer to [Wezterm Setup](wezterm/README.md)
 
 ### 3. VSCode
 For installation and settings, check [VSCode Setup](vscode/README.md)
+
+### 4. Obsidian
+For installation and settings, check [Obsidian Setup](obsidian/README.md)
+
+### 5. Syncthing
+For installation and settings, check [Syncthing Setup](syncthing/README.md)

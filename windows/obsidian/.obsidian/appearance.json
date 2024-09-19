@@ -1,0 +1,10 @@
+{
+  "cssTheme": "Catppuccin",
+  "enabledCssSnippets": [
+    "catpuccin-customization",
+    "excalidraw-customization"
+  ],
+  "interfaceFontFamily": "UbuntuMono Nerd Font",
+  "textFontFamily": "UbuntuMono Nerd Font",
+  "monospaceFontFamily": "UbuntuMono Nerd Font"
+}

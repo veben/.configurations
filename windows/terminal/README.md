@@ -1,4 +1,4 @@
-# Windows Terminal configuration
+# Windows Terminal installation and configuration
 > See: https://learn.microsoft.com/en-us/windows/terminal/install
 
 ## 1. Installation

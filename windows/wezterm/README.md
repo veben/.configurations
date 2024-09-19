@@ -1,4 +1,4 @@
-# Windows Terminal configuration
+# Wezterm installation and configuration
 > See: https://wezfurlong.org/wezterm/index.html
 
 ## 1. Installation
