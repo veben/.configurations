@@ -122,6 +122,10 @@ format = '[ $symbol $branch]($style)'
 style = "fg:base bg:green"
 format = '[ $all_status$ahead_behind]($style)[](fg:green)'
 
+[package]
+style = "fg:base bg:surface2"
+format = '[ $symbol$version]($style)[](fg:surface2)'
+
 [nodejs]
 symbol = ""
 style = "fg:base bg:green"
