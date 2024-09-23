@@ -1,3 +1,7 @@
+body {
+    --file-line-width: 100%;
+}
+
 .theme-dark {
   --background-primary: #121212;
   --background-secondary: #121212;

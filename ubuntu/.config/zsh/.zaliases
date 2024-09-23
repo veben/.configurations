@@ -10,16 +10,18 @@ alias myip="dig ANY +short @resolver2.opendns.com myip.opendns.com"
 alias reload='source $ZDOTDIR/.zshrc'
 alias sapu="sudo apt-get update"
 alias big="du -aBM 2>/dev/null | sort -nr | head -n 50 | more"
-# Rerun the previous command with sudo:
+# Reruns the previous command with sudo:
 alias ffs='sudo $(fc -ln -1)'
 alias untar='tar -zxvf'
 alias path='echo -e ${PATH//:/\\n}'
-# Show open ports
+# Shows open ports
 alias ports='sudo netstat -tulanp'
-# Allow wget resume
+# Allows wget resume
 alias wget='wget -c'
 alias gh='history|grep'
 alias b='batcat'
+# Finds all files recursively and sorts by last modification. Ignores hidden files
+alias lasmod='find . -type f -not -path "*/\.*" -exec ls -lrt {} +'
 
 # Navigation
 alias dev="cd ~/env/dev/"

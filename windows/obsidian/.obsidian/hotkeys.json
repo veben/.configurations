@@ -21,12 +21,33 @@
       "key": "0"
     }
   ],
-  "editor:focus": [
+  "editor:swap-line-down": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "ArrowDown"
+    }
+  ],
+  "editor:swap-line-up": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "ArrowUp"
+    }
+  ],
+  "table-editor-obsidian:table-control-bar": [],
+  "app:go-forward": [],
+  "obsidian-excalidraw-plugin:save": [],
+  "workspace:goto-tab-1": [],
+  "workspace:goto-tab-2": [],
+  "editor:focus-right": [
     {
       "modifiers": [
         "Mod"
       ],
-      "key": "1"
+      "key": "2"
     }
   ],
   "editor:focus-left": [
@@ -34,15 +55,53 @@
       "modifiers": [
         "Mod"
       ],
-      "key": "0"
+      "key": "1"
     }
   ],
-  "app:delete-file": [
+  "tab-shifter:move-tab-next": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "ArrowRight"
+    }
+  ],
+  "tab-shifter:move-tab-prev": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "ArrowLeft"
+    }
+  ],
+  "app:go-back": [],
+  "obsidian-excalidraw-plugin:insert-link": [
     {
       "modifiers": [
         "Mod"
       ],
+      "key": "K"
+    }
+  ],
+  "obsidian-editor-shortcuts:insertLineBelow": [],
+  "editor:delete-paragraph": [],
+  "editor:toggle-checklist-status": [],
+  "app:delete-file": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
       "key": "Delete"
+    },
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "Backspace"
     }
   ]
 }

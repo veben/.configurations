@@ -2,5 +2,9 @@
   "templater-obsidian",
   "obsidian-excalidraw-plugin",
   "obsidian-linter",
-  "obsidian-style-settings"
+  "obsidian-style-settings",
+  "tag-wrangler",
+  "obsidian-editor-shortcuts",
+  "table-editor-obsidian",
+  "tab-shifter"
 ]
