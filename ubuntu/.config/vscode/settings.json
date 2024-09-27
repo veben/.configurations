@@ -3,8 +3,8 @@
   "workbench.settings.editor": "json",
   "catppuccin.colorOverrides": {
     "mocha": {
-      "base": "#121212", // #1f1e1e
-      "mantle": "#121212", // #191918
+      "base": "#121212", // Nord #2e3440
+      "mantle": "#121212",
       "crust": "#121212",
     },
   },

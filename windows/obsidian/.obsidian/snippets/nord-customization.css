@@ -1,0 +1,65 @@
+body {
+  --file-line-width: 100%;
+}
+
+.theme-dark {
+  --background-primary: #2E3440;
+  --background-secondary: #2E3440;
+  --background-secondary-alt: #2E3440;
+  --text-normal: #D8DEE9;
+  --text-faint: #4C566A;
+  --text-title-h1: #88C0D0;
+  --text-title-h2: #81A1C1;
+  --text-title-h3: #5E81AC;
+  --text-title-h4: #5E81AC;
+  --text-title-h5: #5E81AC;
+  --text-link: #88C0D0;
+  --text-a-hover: #8FBCBB;
+  --text-accent: #88C0D0;
+  --interactive-accent: #5E81AC;
+  --text-highlight-bg: rgba(136, 192, 208, 0.3);
+  --text-selection: rgb(94, 129, 172, 0.6);
+  --interactive-accent-rgb: 94, 129, 172;
+  --inline-title-color: #88C0D0;
+}
+
+/* Remove cursor line background */
+.cm-active {
+  background-color: transparent !important;
+}
+
+/* For legacy editor */
+.CodeMirror-activeline-background {
+  background-color: transparent !important;
+}
+
+
+.markdown-preview-view h1,
+.markdown-source-view.mod-cm6 .cm-header-1 {
+  color: var(--text-title-h1);
+}
+
+.markdown-preview-view h2,
+.markdown-source-view.mod-cm6 .cm-header-2 {
+  color: var(--text-title-h2);
+}
+
+.markdown-preview-view h3,
+.markdown-source-view.mod-cm6 .cm-header-3 {
+  color: var(--text-title-h3);
+}
+
+.markdown-preview-view h4,
+.markdown-source-view.mod-cm6 .cm-header-4 {
+  color: var(--text-title-h4);
+}
+
+.markdown-preview-view h5,
+.markdown-source-view.mod-cm6 .cm-header-5 {
+  color: var(--text-title-h5);
+}
+
+.markdown-preview-view h6,
+.markdown-source-view.mod-cm6 .cm-header-6 {
+  color: var(--text-title-h6);
+}

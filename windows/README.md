@@ -30,6 +30,12 @@ Set-WinUserLanguageList $LangList
 - Add "United States-International" QWERTY keyboard
 - Remove "US" QWERTY keyboard
 
+### 3. Hide the Recycle Bin from the Desktop
+Hide the Recycle Bin from the Desktop using Poweshell:
+```sh
+Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel" -Name "{645FF040-5081-101B-9F08-00AA002F954E}" -Value 1
+```
+
 ## II. Nerd Font Installation
 - Download Ubuntu Nerd Font:
 ```sh
