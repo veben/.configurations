@@ -13,28 +13,50 @@ scrollback_lines = 5000
 config.font = wezterm.font('UbuntuMono Nerd Font', { weight = 'DemiLight' })
 
 ------------- Theme -------------
--- config.color_scheme = 'nord'
--- local function scheme_for_appearance(appearance)
---   if appearance:find("Dark") then
---     return "nord"
---   else
---     return "nord-light"
---   end
--- end
+-- Custom Nord
+local custom_nord = {
+  foreground = "#D8DEE9",
+  background = "#2E3440",
+  cursor_bg = "#D8DEE9",
+  cursor_fg = "#2E3440",
+  cursor_border = "#D8DEE9",
+  selection_fg = "#D8DEE9",
+  selection_bg = "#4C566A",
+  scrollbar_thumb = "#4C566A",
+  split = "#4C566A",
+  ansi = {"#3B4252", "#BF616A", "#A3BE8C", "#EBCB8B", "#81A1C1", "#B48EAD", "#88C0D0", "#E5E9F0"},
+  brights = {"#4C566A", "#BF616A", "#A3BE8C", "#EBCB8B", "#81A1C1", "#B48EAD", "#8FBCBB", "#ECEFF4"},
 
--- config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
-
-config.color_scheme = "Catppuccin Mocha"
-
-local custom = wezterm.color.get_builtin_schemes()["Catppuccin Mocha"]
-custom.background = "#0e1117" -- "#2E3440"
-custom.tab_bar.background = "#0e1117"
-custom.tab_bar.inactive_tab.bg_color = "#0e1117"
-custom.tab_bar.new_tab.bg_color = "#0e1117"
-config.color_schemes = {
-  ["OLEDppuccin"] = custom,
+  tab_bar = {
+    background = "#2E3440",
+    inactive_tab = {
+      bg_color = "#2E3440",
+      fg_color = "#D8DEE9",
+    },
+    active_tab = {
+      bg_color = "#2E3440",
+      fg_color = "#88c0d0",
+    },
+    new_tab = {
+      bg_color = "#2E3440",
+      fg_color = "#D8DEE9",
+    },
+  }
 }
-config.color_scheme = "OLEDppuccin"
+
+-- Custom Catpuccin Mocha
+local custom_catpuccin_mocha = wezterm.color.get_builtin_schemes()["Catppuccin Mocha"]
+custom_catpuccin_mocha.background = "#0e1117"
+custom_catpuccin_mocha.tab_bar.background = "#0e1117"
+custom_catpuccin_mocha.tab_bar.inactive_tab.bg_color = "#0e1117"
+custom_catpuccin_mocha.tab_bar.new_tab.bg_color = "#0e1117"
+
+-- Theme selection
+config.color_schemes = {
+  ["CustomNord"] = custom_nord,
+  ["CustomCatppuccinMocha"] = custom_catpuccin_mocha,
+}
+config.color_scheme = "CustomCatppuccinMocha"
 
 ------------- Shortcuts -------------
 disable_default_key_bindings = true
