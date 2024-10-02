@@ -5,5 +5,6 @@
   "newFileLocation": "folder",
   "newFileFolderPath": "00_inbox",
   "attachmentFolderPath": "03_resources",
-  "showLineNumber": true
+  "showLineNumber": true,
+  "livePreview": true
 }

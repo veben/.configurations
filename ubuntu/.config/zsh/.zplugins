@@ -11,7 +11,6 @@ autoload -U compinit; compinit
 
 # zsh-zsh-syntax-highlighting
 [ -f $ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source $ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-[ -f $ZDOTDIR/plugins/zsh-syntax-highlighting/catppuccin_mocha-zsh-syntax-highlighting.zsh ] && source $ZDOTDIR/plugins/zsh-syntax-highlighting/catppuccin_mocha-zsh-syntax-highlighting.zsh
 
 # zsh-z
 [ -f $ZDOTDIR/plugins/zsh-z/zsh-z.plugin.zsh ] && source $ZDOTDIR/plugins/zsh-z/zsh-z.plugin.zsh

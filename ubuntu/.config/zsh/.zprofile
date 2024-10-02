@@ -30,20 +30,31 @@ autoload -U +X bashcompinit && bashcompinit # Enables Bash completion compatibil
 complete -C /usr/bin/terraform terraform # Set up Terraform completion
 
 # Theme
-export MY_THEME=catpuccin_mocha
+# Nord Palette: https://www.nordtheme.com/docs/colors-and-palettes
+NORD_PALETTE=("#3b4252" "#434c5e" "#4c566a" "#d8dee9" "#e5e9f0" "#eceff4" "#8fbcbb" "#88c0d0" "#81a1c1" "#5e81ac" "#bf616a" "#d08770" "#ebcb8b" "#a3be8c" "#b48ead")
+
+export MY_THEME=nord
 if [[ "$MY_THEME" == "catpuccin_mocha" ]]; then
     export FZF_DEFAULT_OPTS=" \
         --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
         --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
         --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
         --multi"
+    [ -f $ZDOTDIR/plugins/zsh-syntax-highlighting/catppuccin_mocha-zsh-syntax-highlighting.zsh ] && source $ZDOTDIR/plugins/zsh-syntax-highlighting/catppuccin_mocha-zsh-syntax-highlighting.zsh
+    export BAT_THEME="Catppuccin Mocha"
 elif [[ "$MY_THEME" == "nord" ]]; then
-    export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#81a1c1'
-    export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
-        --color=fg:#e5e9f0,bg:#3b4252,hl:#81a1c1
-        --color=fg+:#e5e9f0,bg+:#3b4252,hl+:#81a1c1
-        --color=info:#eacb8a,prompt:#bf6069,pointer:#b48dac
-        --color=marker:#a3be8b,spinner:#b48dac,header:#a3be8b'
+    export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=${NORD_PALETTE[10]}"
+    export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS"
+        --color=fg:${NORD_PALETTE[5]},bg:${NORD_PALETTE[1]},hl:${NORD_PALETTE[9]}
+        --color=fg+:${NORD_PALETTE[5]},bg+:${NORD_PALETTE[1]},hl+:${NORD_PALETTE[9]}
+        --color=info:${NORD_PALETTE[13]},prompt:${NORD_PALETTE[11]},pointer:${NORD_PALETTE[15]}
+        --color=marker:${NORD_PALETTE[14]},spinner:${NORD_PALETTE[15]},header:${NORD_PALETTE[14]}"
+    typeset -A ZSH_HIGHLIGHT_STYLES
+    export ZSH_HIGHLIGHT_STYLES[unknown-token]="fg=${NORD_PALETTE[11]},bold"
+    export ZSH_HIGHLIGHT_STYLES[command]="fg=${NORD_PALETTE[14]},bold"
+    export ZSH_HIGHLIGHT_STYLES[alias]="fg=${NORD_PALETTE[14]},bold"
+    export ZSH_HIGHLIGHT_STYLES[builtin]="fg=${NORD_PALETTE[14]},bold"
+    export BAT_THEME="Nord"
 fi
 
 # This script is designed to check if the current environment is running on a WSL

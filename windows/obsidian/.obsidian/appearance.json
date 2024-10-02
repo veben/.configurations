@@ -1,10 +1,11 @@
 {
-  "cssTheme": "Catppuccin",
+  "cssTheme": "Obsidian Nord",
   "enabledCssSnippets": [
-    "catpuccin-customization",
-    "excalidraw-customization"
+    "excalidraw-customization",
+    "nord-customization"
   ],
   "interfaceFontFamily": "UbuntuMono Nerd Font",
   "textFontFamily": "UbuntuMono Nerd Font",
-  "monospaceFontFamily": "UbuntuMono Nerd Font"
+  "monospaceFontFamily": "UbuntuMono Nerd Font",
+  "accentColor": "#5e81ac"
 }

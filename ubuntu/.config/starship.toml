@@ -10,7 +10,7 @@ $all
 
 right_format = """$cmd_duration"""
 
-palette = 'catppuccin_mocha'
+palette = 'nord'
 
 [palettes.catppuccin_mocha]
 rosewater = "#dc8a78"
@@ -40,38 +40,32 @@ base = "#1e1e2e"
 mantle = "#1a1a2e"
 crust = "#151515"
 
-[palettes.catppuccin_latte]
-rosewater = "#dc8a78"
-flamingo = "#dd7878"
-pink = "#ea76cb"
-mauve = "#8839ef"
-red = "#d20f39"
-maroon = "#e64553"
-peach = "#fe640b"
-yellow = "#df8e1d"
-green = "#40a02b"
-teal = "#179299"
-sky = "#04a5e5"
-sapphire = "#209fb5"
-blue = "#1e66f5"
-lavender = "#7287fd"
-text = "#4c4f69"
-subtext1 = "#5c5f77"
-subtext0 = "#6c6f85"
-overlay2 = "#7c7f93"
-overlay1 = "#8c8fa1"
-overlay0 = "#9ca0b0"
-surface2 = "#acb0be"
-surface1 = "#bcc0cc"
-surface0 = "#ccd0da"
-base = "#eff1f5"
-mantle = "#e6e9ef"
-crust = "#dce0e8"
+[palettes.nord] # https://www.nordtheme.com/docs/colors-and-palettes
+# Polar Night
+nord0 = "#1c1f26" # <- Darker background (original: #2e3440, another option: #202329)
+nord1 = "#3b4252"
+nord2 = "#434c5e"
+nord3 = "#4c566a"
+# Snow Storm
+nord4 = "#d8dee9"
+nord5 = "#e5e9f0"
+nord6 = "#eceff4"
+# Frost
+nord7 = "#8fbcbb"
+nord8 = "#88c0d0"
+nord9 = "#81a1c1"
+nord10 = "#5e81ac"
+# Aurora
+nord11 = "#bf616a"
+nord12 = "#d08770"
+nord13 = "#ebcb8b"
+nord14 = "#a3be8c"
+nord15 = "#b48ead"
 
 [os]
 disabled = false
-style = "bg:surface0 fg:base"
-format = '[](surface0)[$symbol]($style)[](fg:surface0 bg:surface0)'
+style = "bg:nord3 fg:nord0"
+format = '[](nord3)[$symbol ]($style)'
 
 [os.symbols]
 Windows = "󰍲"
@@ -96,13 +90,13 @@ RedHatEnterprise = "󱄛"
 
 [username]
 show_always = true
-style_user = "bg:surface0 fg:base"
-style_root = "bg:surface0 fg:base"
-format = '[$user]($style)[](fg:surface0)'
+style_user = "bg:nord3 fg:nord0"
+style_root = "bg:nord3 fg:nord0"
+format = '[$user]($style)[](fg:nord3)'
 
 [directory]
-style = "fg:base bg:flamingo"
-format = "[ $path]($style)[](fg:flamingo)"
+style = "fg:nord5 bg:nord2"
+format = "[ $path]($style)[](fg:nord2)"
 truncation_length = 3
 truncation_symbol = "…/"
 
@@ -115,12 +109,12 @@ truncation_symbol = "…/"
 
 [git_branch]
 symbol = ""
-style = "fg:base bg:green"
+style = "fg:nord6 bg:nord1"
 format = '[ $symbol $branch]($style)'
 
 [git_status]
-style = "fg:base bg:green"
-format = '[[(*$conflicted$untracked$modified$staged$renamed$deleted)]($style) ($ahead_behind$stashed)]($style)[](fg:green)'
+style = "fg:nord6 bg:nord1"
+format = '[[(*$conflicted$untracked$modified$staged$renamed$deleted)]($style) ($ahead_behind$stashed)]($style)[](fg:nord1)'
 conflicted = "​"
 untracked = "​"
 modified = "​"
@@ -130,71 +124,77 @@ deleted = "​"
 stashed = "≡"
 
 [package]
-style = "fg:base bg:surface2"
-format = '[ $symbol$version]($style)[](fg:surface2)'
+style = "fg:nord1 bg:nord4"
+format = '[ $symbol$version]($style)[](fg:nord1)'
 
 [nodejs]
 symbol = ""
-style = "fg:base bg:green"
-format = '[ $symbol $version]($style)[](fg:green)'
+style = "fg:nord14 bg:nord1"
+format = '[ $symbol $version]($style)[](fg:nord1)'
 
 [rust]
 symbol = ""
-style = "fg:base bg:maroon"
-format = '[ $symbol $version]($style)[](fg:maroon)'
+style = "fg:nord12 bg:nord1"
+format = '[ $symbol $version]($style)[](fg:nord1)'
 
 [golang]
 symbol = ""
-style = "fg:base bg:teal"
-format = '[ $symbol $version]($style)[](fg:teal)'
+style = "fg:nord7 bg:nord1"
+format = '[ $symbol $version]($style)[](fg:nord1)'
 
 [php]
 symbol = ""
-style = "fg:base bg:blue"
-format = '[ $symbol $version]($style)[](fg:blue)'
+style = "fg:nord9 bg:nord1"
+format = '[ $symbol $version]($style)[](fg:nord1)'
 
 [java]
 symbol = " "
-style = "fg:base bg:red"
-format = '[ $symbol $version]($style)[](fg:red)'
+style = "fg:nord11 bg:nord1"
+format = '[ $symbol $version]($style)[](fg:nord1)'
 
 [kotlin]
 symbol = ""
-style = "fg:base bg:peach"
-format = '[ $symbol $version]($style)[](fg:peach)'
+style = "fg:nord12 bg:nord1"
+format = '[ $symbol $version]($style)[](fg:nord1)'
 
 [python]
 symbol = ""
-style = "fg:base bg:yellow"
-format = '[ $symbol $version]($style)[](fg:yellow)'
+style = "fg:nord13 bg:nord1"
+format = '[ $symbol $version]($style)[](fg:nord1)'
 
 [ruby]
 symbol = " "
-style = "fg:base bg:red"
-format = '[ $symbol $version]($style)[](fg:red)'
+style = "fg:nord11 bg:nord1"
+format = '[ $symbol $version]($style)[](fg:nord1)'
 
 [docker_context]
 symbol = ""
-style = "fg:base bg:sky"
-format = '[ $symbol $version]($style)[](fg:sky)'
+style = "fg:nord8 bg:nord1"
+format = '[ $symbol $version]($style)[](fg:nord1)'
 
 [aws]
-style = 'fg:base bg:peach'
+style = 'fg:nord12 bg:nord1'
 symbol = " "
-format = '[ $symbol$profile (\($region\) )(\[ $duration\] )]($style)[](fg:peach)'
+format = '[ $symbol$profile (\($region\) )(\[ $duration\] )]($style)[](fg:nord1)'
 disabled = true
 
 [kubernetes]
-style = 'fg:base bg:sapphire'
-format = '[ $symbol$context(\($namespace\))]($style)[](fg:sapphire)'
+style = 'fg:nord10 bg:nord1'
+format = '[ $symbol$context(\($namespace\))]($style)[](fg:nord1)'
 symbol = "🅺 "
 disabled = true
 
 [time]
-time_format = "%R"
-style = "bg:peach"
-format = '[[  $time ](fg:base bg:purple)[](fg:purple)]($style)'
 disabled = true
+
+[cmd_duration]
+min_time = 2000  # Show command duration if it exceeds 2000 milliseconds (2 seconds)
+format = "[ $duration ]($style)"
+style = "nord5"
+
+[character]
+success_symbol = "[❯](nord8)"
+error_symbol = "[❯](nord8)"
 
 [line_break]
 disabled = false

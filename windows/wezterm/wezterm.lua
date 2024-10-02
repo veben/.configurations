@@ -13,33 +13,55 @@ scrollback_lines = 5000
 config.font = wezterm.font('UbuntuMono Nerd Font', { weight = 'DemiLight' })
 
 ------------- Theme -------------
--- Custom Nord
+-- Nord Palette: https://www.nordtheme.com/docs/colors-and-palettes
+local nord_palette = {
+  nord0 = "#1c1f26", -- <- Darker background (original: #2e3440, another option: #202329)
+  nord1 = "#3b4252",
+  nord2 = "#434c5e",
+  nord3 = "#4c566a",
+  -- Snow Storm
+  nord4 = "#d8dee9",
+  nord5 = "#e5e9f0",
+  nord6 = "#eceff4",
+  -- Frost
+  nord7 = "#8fbcbb",
+  nord8 = "#88c0d0",
+  nord9 = "#81a1c1",
+  nord10 = "#5e81ac",
+  -- Aurora
+  nord11 = "#bf616a",
+  nord12 = "#d08770",
+  nord13 = "#ebcb8b",
+  nord14 = "#a3be8c",
+  nord15 = "#b48ead"
+}
+
 local custom_nord = {
-  foreground = "#D8DEE9",
-  background = "#2E3440",
-  cursor_bg = "#D8DEE9",
-  cursor_fg = "#2E3440",
-  cursor_border = "#D8DEE9",
-  selection_fg = "#D8DEE9",
-  selection_bg = "#4C566A",
-  scrollbar_thumb = "#4C566A",
-  split = "#4C566A",
-  ansi = {"#3B4252", "#BF616A", "#A3BE8C", "#EBCB8B", "#81A1C1", "#B48EAD", "#88C0D0", "#E5E9F0"},
-  brights = {"#4C566A", "#BF616A", "#A3BE8C", "#EBCB8B", "#81A1C1", "#B48EAD", "#8FBCBB", "#ECEFF4"},
+  foreground = nord_palette.nord4,
+  background = nord_palette.nord0,
+  cursor_bg = nord_palette.nord4,
+  cursor_fg = nord_palette.nord0,
+  cursor_border = nord_palette.nord4,
+  selection_fg = nord_palette.nord4,
+  selection_bg = nord_palette.nord3,
+  scrollbar_thumb = nord_palette.nord3,
+  split = nord_palette.nord3,
+  ansi = {nord_palette.nord1, nord_palette.nord11, nord_palette.nord14, nord_palette.nord13, nord_palette.nord9, nord_palette.nord15, nord_palette.nord8, nord_palette.nord5},
+  brights = {nord_palette.nord3, nord_palette.nord11, nord_palette.nord14, nord_palette.nord13, nord_palette.nord9, nord_palette.nord15, nord_palette.nord7, nord_palette.nord6},
 
   tab_bar = {
-    background = "#2E3440",
+    background = nord_palette.nord0,
     inactive_tab = {
-      bg_color = "#2E3440",
-      fg_color = "#D8DEE9",
+      bg_color = nord_palette.nord0,
+      fg_color = nord_palette.nord4,
     },
     active_tab = {
-      bg_color = "#2E3440",
-      fg_color = "#88c0d0",
+      bg_color = nord_palette.nord8,
+      fg_color = nord_palette.nord0,
     },
     new_tab = {
-      bg_color = "#2E3440",
-      fg_color = "#D8DEE9",
+      bg_color = nord_palette.nord0,
+      fg_color = nord_palette.nord4,
     },
   }
 }
@@ -56,7 +78,7 @@ config.color_schemes = {
   ["CustomNord"] = custom_nord,
   ["CustomCatppuccinMocha"] = custom_catpuccin_mocha,
 }
-config.color_scheme = "CustomCatppuccinMocha"
+config.color_scheme = "CustomNord"
 
 ------------- Shortcuts -------------
 disable_default_key_bindings = true

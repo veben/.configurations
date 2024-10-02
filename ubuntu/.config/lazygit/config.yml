@@ -1,25 +1,51 @@
-# Theme + flavor: https://github.com/catppuccin/lazygit/blob/main/themes/mocha/mauve.yml
+# Nord theme
 gui:
   theme:
     activeBorderColor:
-    - '#cba6f7'
-    - bold
+      - '#88C0D0'
+      - bold
     inactiveBorderColor:
-      - '#a6adc8'
+      - '#4C566A'
     optionsTextColor:
-      - '#89b4fa'
+      - '#81A1C1'
     selectedLineBgColor:
-      - '#313244'
+      - '#3B4252'
     cherryPickedCommitBgColor:
-      - '#45475a'
+      - '#434C5E'
     cherryPickedCommitFgColor:
-      - '#cba6f7'
+      - '#88C0D0'
     unstagedChangesColor:
-      - '#f38ba8'
+      - '#BF616A'
     defaultFgColor:
-      - '#cdd6f4'
+      - '#D8DEE9'
     searchingActiveBorderColor:
-      - '#f9e2af'
+      - '#EBCB8B'
 
   authorColors:
-    '*': '#b4befe'
+    '*': '#A3BE8C'
+
+# Catpuccin Mocha theme
+# gui:
+#   theme:
+#     activeBorderColor:
+#     - '#cba6f7'
+#     - bold
+#     inactiveBorderColor:
+#       - '#a6adc8'
+#     optionsTextColor:
+#       - '#89b4fa'
+#     selectedLineBgColor:
+#       - '#313244'
+#     cherryPickedCommitBgColor:
+#       - '#45475a'
+#     cherryPickedCommitFgColor:
+#       - '#cba6f7'
+#     unstagedChangesColor:
+#       - '#f38ba8'
+#     defaultFgColor:
+#       - '#cdd6f4'
+#     searchingActiveBorderColor:
+#       - '#f9e2af'
+
+#   authorColors:
+#     '*': '#b4befe'
