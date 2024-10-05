@@ -1,20 +1,152 @@
 {
   // open json editor for settings
   "workbench.settings.editor": "json",
-  "catppuccin.colorOverrides": {
-    "mocha": {
-      "base": "#121212", // Nord #2e3440
-      "mantle": "#121212",
-      "crust": "#121212",
-    },
+  // ---------------- Theme ----------------
+  // Custom theme based on Nord Palette: https://www.nordtheme.com/docs/colors-and-palettes
+  "workbench.colorCustomizations": {
+    "[Nord]": {
+      // Activity Bar (left sidebar)
+      "activityBar.background": "#1c1f26",
+      // Sidebar
+      "sideBar.background": "#1c1f26",
+      "sideBarSectionHeader.background": "#1c1f26",
+      // Status Bar (bottom)
+      "statusBar.background": "#1c1f26",
+      "statusBar.noFolderBackground": "#1c1f26",
+      // Title Bar
+      "titleBar.activeBackground": "#1c1f26",
+      "titleBar.inactiveBackground": "#1c1f26",
+      // Menu Bar
+      "menubar.selectionBackground": "#1c1f26",
+      // Panel (terminal, output, etc.)
+      "panel.background": "#1c1f26",
+      "panelTitle.inactiveForeground": "#1c1f26",
+      // Editor Group Header (tabs area)
+      "editorGroupHeader.tabsBackground": "#1c1f26",
+      "tab.activeBackground": "#1c1f26",
+      "tab.inactiveBackground": "#1c1f26",
+      // Other
+      "editor.background": "#1c1f26",
+      "editorGutter.background": "#1c1f26",
+      "editorLineNumber.activeForeground": "#88C0D0",
+      "editor.lineHighlightBackground": "#1c1f26",
+      "editor.lineHighlightBorder": "#1c1f26",
+      "debugIcon.breakpointForeground": "#88C0D0",
+    }
   },
-  // use your accent on the statusBar as well
-  "catppuccin.customUIColors": {
-    "mocha": {
-      "statusBar.foreground": "accent",
-    },
+  "editor.tokenColorCustomizations": {
+    "[Nord]": {
+      "textMateRules": [
+        {
+          "scope": "heading.1.markdown",
+          "settings": {
+            "foreground": "#8fbcbb"
+          }
+        },
+        {
+          "scope": "heading.2.markdown",
+          "settings": {
+            "foreground": "#88c0d0"
+          }
+        },
+        {
+          "scope": "heading.3.markdown",
+          "settings": {
+            "foreground": "#81a1c1"
+          }
+        },
+        {
+          "scope": "heading.4.markdown",
+          "settings": {
+            "foreground": "#5e81ac"
+          }
+        },
+        {
+          "scope": "heading.5.markdown",
+          "settings": {
+            "foreground": "#A3BE8C"
+          }
+        },
+        {
+          "scope": "heading.6.markdown",
+          "settings": {
+            "foreground": "#ebcb8b"
+          }
+        },
+        {
+          "scope": [
+            "strong",
+            "markup.bold"
+          ],
+          "settings": {
+            "foreground": "#b48ead",
+            "fontStyle": "bold"
+          }
+        },
+        {
+          "scope": [
+            "markup.italic",
+            "emphasis"
+          ],
+          "settings": {
+            "foreground": "#b48ead",
+            "fontStyle": "italic"
+          }
+        },
+        {
+          "scope": "keyword.control.flow.python",
+          "settings": {
+            "foreground": "#b48ead"
+          }
+        },
+        {
+          "scope": "entity.name.namespace",
+          "settings": {
+            "foreground": "#EBCB8B"
+          }
+        },
+        {
+          "scope": [
+            "entity.name.function"
+          ],
+          "settings": {
+            "foreground": "#5e81ac"
+          }
+        },
+        {
+          "scope": [
+            "constant.numeric",
+            "constant.numeric.integer",
+            "constant.numeric.float",
+            "constant.numeric.hex",
+            "constant.numeric.octal",
+            "constant.numeric.binary",
+            "constant.numeric.complex"
+          ],
+          "settings": {
+            "foreground": "#D08770"
+          }
+        },
+        {
+          "scope": [
+            "variable.parameter"
+          ],
+          "settings": {
+            "foreground": "#e5e9f0"
+          }
+        }
+      ]
+    }
   },
-  "catppuccin.italicKeywords": false,
+  "editor.semanticTokenColorCustomizations": {
+    "[Nord]": {
+      "rules": {
+        "class.builtin": {
+          "foreground": "#B48EAD"
+        }
+      }
+    }
+  },
   // ---------------- Icons ----------------
   "workbench.iconTheme": "catppuccin-mocha",
   // ---------------- Fonts ----------------
@@ -86,7 +218,7 @@
     "editor.formatOnSave": false
   },
   "go.toolsManagement.autoUpdate": true,
-  "workbench.colorTheme": "Catppuccin Mocha",
-  // ---------------- Excalidraw ----------------
-  "excalidraw.theme": "auto"
+  "workbench.colorTheme": "Nord",
+  // Excalidraw
+  "excalidraw.theme": "auto",
 }

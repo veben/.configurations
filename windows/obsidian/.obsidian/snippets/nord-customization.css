@@ -1,5 +1,6 @@
 body {
   --file-line-width: 100%;
+  --background-modifier-error: var(--frost3);
 }
 
 /* Nord Palette: https://www.nordtheme.com/docs/colors-and-palettes */
@@ -39,4 +40,8 @@ body {
 
 .suggestion-highlight {
   color: var(--frost3);
+}
+
+::spelling-error {
+  text-decoration: var(--orange) wavy underline;
 }

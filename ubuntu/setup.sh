@@ -30,13 +30,14 @@ sed -i 's/<name_perso>/$GIT_USER/g' $XDG_CONFIG_HOME/git/.gitconfig.perso
 sed -i 's/<email_perso>/$GIT_EMAIL/g' $XDG_CONFIG_HOME/git/.gitconfig.perso
 sed -i 's/<key_perso>/perso_github_$GIT_USER/g' $XDG_CONFIG_HOME/git/.gitconfig.perso
 
+echo "Install VSCode extensions"
+cat $XDG_CONFIG_HOME/vscode/wsl-extensions.txt | xargs -L 1 code --install-extension
+
 echo "Create symbolic links for configurations..."
 ln -sf $XDG_CONFIG_HOME/git/.gitconfig $HOME/.gitconfig
 ln -sf $XDG_CONFIG_HOME/vscode/settings.json $HOME/.vscode-server/data/Machine/settings.json
+ln -sf $XDG_CONFIG_HOME/vscode/style.less $HOME/.local/state/crossnote/style.less
 ln -sf $XDG_CONFIG_HOME/zsh/.zshrc $HOME/.zshrc
-
-echo "Install VSCode extensions"
-cat $XDG_CONFIG_HOME/vscode/wsl-extensions.txt | xargs -L 1 code --install-extension
 
 echo "Create ZSH cache folder: "
 mkdir -p $HOME/.cache/zsh/
