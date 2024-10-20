@@ -1,7 +1,11 @@
+arcticicestudio.nord-visual-studio-code
 catppuccin.catppuccin-vsc
 catppuccin.catppuccin-vsc-icons
+golang.go
 drcika.apc-extension
+hashicorp.terraform
 gitpod.gitpod-desktop
+ms-python.vscode-pylance
 ms-vscode-remote.remote-ssh
 ms-vscode-remote.remote-ssh-edit
 ms-vscode-remote.remote-wsl

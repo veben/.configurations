@@ -171,7 +171,7 @@ sudo usermod -aG docker $USER
 - Verify installation:
 ```sh
 docker --version
-docker-compose version
+docker compose version
 ```
 - For Ubuntu 22.04 or Debian 10+, configure iptables:
 ```sh

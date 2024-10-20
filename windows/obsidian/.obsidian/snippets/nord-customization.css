@@ -36,6 +36,8 @@ body {
   --checkbox-border-color-hover: var(--frost3);
 
   --code-background: var(--dark0);
+
+  --graph-node-tag: var(--frost2);
 }
 
 .suggestion-highlight {

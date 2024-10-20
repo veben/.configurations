@@ -1,14 +1,15 @@
-Extensions installed on WSL: Ubuntu-22.04:
+arcticicestudio.nord-visual-studio-code
 catppuccin.catppuccin-vsc
 catppuccin.catppuccin-vsc-icons
 golang.go
+drcika.apc-extension
 hashicorp.terraform
-ms-azuretools.vscode-azurefunctions
-ms-azuretools.vscode-azureresourcegroups
-ms-azuretools.vscode-docker
+gitpod.gitpod-desktop
 ms-python.black-formatter
 ms-python.debugpy
 ms-python.python
 ms-python.vscode-pylance
 ms-vscode.azure-account
+pomdtr.excalidraw-editor
 shd101wyy.markdown-preview-enhanced
+yzane.markdown-pdf
