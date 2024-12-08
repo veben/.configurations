@@ -65,4 +65,5 @@ For installation and settings, check [Syncthing Setup](syncthing/README.md)
 ```
 ### 7. Brave
 1. Install Brave browser
-2. Install Nord theme following this [link](https://chromewebstore.google.com/detail/nord/abehfkkfjlplnjadfcjiflnejblfmmpj)
+2. Configure sync following this address: `brave://settings/braveSync/setup`
+3. Install Nord theme following this [link](https://chromewebstore.google.com/detail/nord/abehfkkfjlplnjadfcjiflnejblfmmpj)
