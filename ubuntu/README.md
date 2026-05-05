@@ -43,7 +43,7 @@ ssh-keygen -t ed25519 -C "veben" -f ~/.ssh/perso_github_$GIT_USER
 ```
 - Copy public key:
 ```sh
-xclip -sel clip < ~/.ssh/perso_github_$GIT_USER
+xclip -sel clip < ~/.ssh/perso_github_$GIT_USER.pub
 ```
 - Add the key to your GitHub account
 - Test the connection:
