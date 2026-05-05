@@ -41,6 +41,10 @@ export GIT_USER=<git_username>
 ```sh
 ssh-keygen -t ed25519 -C "veben" -f ~/.ssh/perso_github_$GIT_USER
 ```
+- Add the key:
+```sh
+ssh-add ~/.ssh/perso_github_$GIT_USER
+```
 - Copy public key:
 ```sh
 xclip -sel clip < ~/.ssh/perso_github_$GIT_USER.pub
