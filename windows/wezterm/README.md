@@ -4,7 +4,7 @@
 ## 1. Installation
 Run the following command in Poweshell:
 ```sh
-winget install wez.wezterm
+winget install wez.wezterm --source winget
 ```
 
 ## 2. Configuration
