@@ -41,10 +41,10 @@ Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer
 ## II. Nerd Font Setup
 - Download Ubuntu Nerd Font:
 ```sh
-curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/UbuntuMono.zip
+curl.exe -L "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/UbuntuMono.zip" -o "$env:USERPROFILE\Downloads\UbuntuMono.zip"
 ```
 - Extract all the fonts
-- Select all fonts > Right click > Install
+- Double click on each file to install
 
 ## III. Tools Setup
 ### 1. WSL2 + Ubuntu 22.04
