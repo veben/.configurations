@@ -15,7 +15,9 @@ Copy `keybindings.json` to `%APPDATA%\Code\User` folder
 > Use Powershell
 - Install extensions:
 ```sh
-for /f "tokens=*" %f in (local-extensions.txt) do code --install-extension %f
+Get-Content local-extensions.txt | ForEach-Object {
+    code --install-extension $_
+}
 ```
 - If you need to backup again the extensions:
 ```sh
