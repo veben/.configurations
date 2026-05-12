@@ -114,7 +114,7 @@ config.keys = {
 }
 
 ------------- Others -------------
-config.default_domain = 'WSL:Ubuntu-22.04'
+config.default_domain = 'WSL:Ubuntu'
 config.window_decorations = "INTEGRATED_BUTTONS | RESIZE"
 config.window_background_opacity = 1.0
 config.integrated_title_buttons = {}
