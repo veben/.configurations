@@ -3,14 +3,16 @@
 
 ## I. Setups
 ### 1. Dark Theme
-Activate Dark mode using PowerShell:
-- For system default:
+Activate Dark mode using PowerShell, for system default and applications:
 ```sh
-Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name SystemUsesLightTheme -Value 0 -Type Dword -Force
+$k = "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize"
+New-ItemProperty -Path $k -Name "SystemUsesLightTheme" -Value 0 -PropertyType DWord -Force
+New-ItemProperty -Path $k -Name "AppsUseLightTheme" -Value 0 -PropertyType DWord -Force
 ```
-- For applications:
+Restart File Explorer after setting the values:
 ```sh
-Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name AppsUseLightTheme -Value 0 -Type Dword -Force
+Stop-Process -Name explorer -Force
+Start-Process explorer.exe
 ```
 
 ### 2. QWERTY International Keyboard
