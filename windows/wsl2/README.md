@@ -17,18 +17,17 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 ```sh
 wsl --set-default-version 2
 ```
+4. Reboot the computer
 
 ## II. Install Ubuntu
 
-> From Powershell as administrator
-1. Open [Windows store](https://aka.ms/wslstore), download **Ubuntu** and install it
-2. Launch it and configure a root user
-3. Install Linux kernel from here: https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
-4. Check that Ubuntu use version 2:
+1. Open the Microsoft store, download **Ubuntu** and install it
+2. Launch it and configure a user
+3. Check that Ubuntu use version 2:
 ```sh
 wsl --list --verbose
 ```
-8. If not, change the version:
+4. If not, change the version:
 ```sh
 wsl --set-version ubuntu 2
 ```
