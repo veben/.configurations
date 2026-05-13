@@ -10,10 +10,12 @@ export GIT_PERSO=$HOME/perso
 mkdir -p $GIT_PERSO
 echo $GIT_PERSO
 
-echo "Define config folder: "
+echo "Define config folders: "
 export XDG_CONFIG_HOME=$HOME/.config
 mkdir -p $XDG_CONFIG_HOME
 echo $XDG_CONFIG_HOME
+mkdir -p $HOME/.local/state/crossnote/
+echo $HOME/.local/state/crossnote/
 
 echo "Copy configurations..."
 cp -r .config/bat/ $XDG_CONFIG_HOME
@@ -23,7 +25,7 @@ cp -r .config/lazygit/ $XDG_CONFIG_HOME
 cp -r .config/vscode/ $XDG_CONFIG_HOME
 cp -r .config/zsh/ $XDG_CONFIG_HOME
 cp .config/starship.toml $XDG_CONFIG_HOME
-cp .local/state/crossnote/style.less $HOME/.local/state/crossnote/
+cp -r .local/state/crossnote/style.less $HOME/.local/state/crossnote/
 
 echo "Overwrite personal user and email in git configurations"
 sed -i 's/<name_perso>/$GIT_USER/g' $XDG_CONFIG_HOME/git/.gitconfig.perso
