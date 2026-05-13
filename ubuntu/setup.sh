@@ -46,6 +46,6 @@ mkdir -p $HOME/.cache/zsh/
 echo $HOME/.cache/zsh/
 
 echo "Source .zshrc file..."
-source $HOME/.zshrc
+zsh -lc 'source $HOME/.zshrc'
 
 read -p "Press a key to continue ..."
