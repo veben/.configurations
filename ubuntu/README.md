@@ -41,6 +41,10 @@ export GIT_USER=<git_username>
 ```sh
 ssh-keygen -t ed25519 -C "veben" -f ~/.ssh/perso_github_$GIT_USER
 ```
+- Run the ssh agent
+```sh
+eval "$(ssh-agent -s)"
+```
 - Add the key:
 ```sh
 ssh-add ~/.ssh/perso_github_$GIT_USER
@@ -60,11 +64,10 @@ ssh -T git@github.com
 ```sh
 curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/UbuntuMono.tar.xz
 ```
-
 - Extract and install:
 ```sh
 mkdir -p ~/.local/share/fonts/UbuntuMonoNerdFont
-tar -xf Ubuntu.tar.xz -C ~/.local/share/fonts/UbuntuMonoNerdFont
+tar -xf UbuntuMono.tar.xz -C ~/.local/share/fonts/UbuntuMonoNerdFont
 ```
 - Update font cache:
 ```sh
@@ -129,7 +132,7 @@ sudo apt install fzf
 ```
 - Look at `fzf` version:
 ```sh
-fzf -version
+fzf --version
 ```
 - For version **0.48.0** or later, add this line to `.zplugins` file to add shortcuts and completion...:
 ```plaintext
@@ -177,7 +180,7 @@ sudo usermod -aG docker $USER
 docker --version
 docker compose version
 ```
-- For Ubuntu 22.04 or Debian 10+, configure iptables:
+- For Ubuntu 22.04 or Debian 10+, configure iptables (not needed for 24.04):
 ```sh
 sudo update-alternatives --config iptables
 ```
@@ -234,9 +237,9 @@ sudo apt install bat
 ```sh
 batcat --version
 ```
-- Rebuild bat's cache to load Catpuccin Mocha theme:
+- Rebuild bat's cache to load your favorite theme:
 ```sh
-bat cache --build
+batcat cache --build
 ```
 
 ## 14. Fastfetch Installation
@@ -288,7 +291,7 @@ sudo su -
 ```sh
 chsh -s /bin/zsh
 ```
-- Run the `setup_roo.sh` script:
+- Run the `setup_root.sh` script:
 ```sh
 ./setup_root.sh
 ```
