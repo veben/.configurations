@@ -20,6 +20,7 @@
 15. [K9s Installation](#15-k9s-installation)
 16. [Scripts Deployment](#16-scripts-deployment)
 17. [Root User Configuration](#17-root-user-configuration)
+18. [Windows persistant volume](#18-windows-persistant-volume)
 
 ## 1. Update and Upgrade
 ```sh
@@ -295,3 +296,22 @@ chsh -s /bin/zsh
 ```sh
 ./setup_root.sh
 ```
+## 18. Windows persistant disk
+If yoiu want to have access to a Windows volume le `G:`
+
+- Add the following content to `/etc/wsl.conf`
+```plaintext
+[automount]
+enabled = true
+mountFsTab = true
+options = "metadata,umask=22,fmask=11"
+```
+- Add the following line to `/etc/fstab`
+```plaintext
+G: /mnt/g drvfs defaults,metadata 0 0
+```
+- Create a mountpoint
+```sh
+sudo mkdir -p /mnt/g
+```
+- Resrat WSL and test
